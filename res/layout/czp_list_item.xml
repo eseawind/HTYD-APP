@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText" >
+
+    <TextView
+        android:id="@+id/tv_czp_task"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:text="111111111111111"
+        android:textColor="@color/key_text"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_czp_person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_czp_task"
+        android:text="1111111111111"
+        android:textColor="#999999"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_czp_kptime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_czp_task"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/tv_czp_person_name"
+        android:text="开票时间"
+        android:textColor="#999999"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_czp_czpid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_czp_task"
+        android:layout_gravity="center|right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:text="序号"
+        android:textColor="#999999"
+        android:textSize="16sp" />
+
+</RelativeLayout>

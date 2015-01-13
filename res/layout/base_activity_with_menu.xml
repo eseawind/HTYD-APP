@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/linear_main_menu"
+        android:orientation="vertical"
+        android:background="@color/key_text"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/main_menu_layout" />
+    </LinearLayout>
+
+    <main.activity.MenuHorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#00ffffff"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#00ffffff"
+            android:orientation="horizontal" />
+    </main.activity.MenuHorizontalScrollView>
+
+</FrameLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:ignore="HardcodedText" >
+
+    <CheckBox
+        android:id="@+id/ch_list_czp_simulation"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:checked="true"
+        android:padding="5dp" />
+
+    <View 
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:background="@color/black"
+        />
+
+    <!-- <TextView
+        android:id="@+id/tv_list_czp_actual"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:text="模拟"
+        android:textSize="20sp" /> -->
+
+    <CheckBox
+        android:id="@+id/ch_list_czp_actual"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:checked="true"
+        android:padding="5dp" />
+    <View 
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:layout_marginLeft="-1dp"
+        android:background="@color/black"
+        />
+    <TextView
+        android:id="@+id/tv_list_czp_num"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        style="@style/czp_text"
+        android:text="模拟"
+        android:layout_marginLeft="-1dp"
+        android:textSize="20sp" />
+<View 
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:layout_marginLeft="-1dp"
+        android:background="@color/black"
+        />
+    <TextView
+        android:id="@+id/tv_list_czp_work"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="18"
+        android:gravity="center"
+        style="@style/czp_text"
+        android:layout_marginLeft="-1dp"
+        android:text="模拟"
+        android:textSize="20sp" />
+<View 
+        android:layout_height="match_parent"
+        android:layout_width="1dp"
+        android:background="@color/black"
+        />
+    <TextView
+        android:id="@+id/tv_list_czp_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="center"
+        style="@style/czp_text"
+        android:text="模拟"
+        android:textSize="20sp" />
+
+</LinearLayout>

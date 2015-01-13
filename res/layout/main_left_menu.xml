@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Ll_menu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+	     android:id="@+id/Rl_login"
+	     android:layout_width="fill_parent"
+	     android:layout_height="40dip"
+	     android:background="@drawable/left_menu_loginbk"
+	     android:clickable="true">
+	
+	     <ImageView
+	         android:id="@+id/Iv_LoginIcon"
+	         android:layout_width="@dimen/main_left_menu_login_iconsize"
+	         android:layout_height="@dimen/main_left_menu_login_iconsize"
+	         android:layout_alignParentLeft="true"
+	         android:layout_centerVertical="true"
+	         android:layout_marginLeft="35dp"
+	         android:background="@drawable/main_left_menu_login_icon" />
+	
+	     <TextView
+	         android:id="@+id/Tv_LoginYh"
+	         android:layout_width="60dp"
+	         android:layout_height="fill_parent"
+	         android:layout_marginLeft="20dp"
+	         android:layout_toRightOf="@id/Iv_LoginIcon"
+	         android:ellipsize="end"
+	         android:gravity="center_vertical"
+	         android:singleLine="true"
+	         android:text="@string/main_left_login_yh"
+	         android:textColor="@color/white"
+	         android:textSize="@dimen/main_left_menu_login_textsize" />
+	</RelativeLayout>
+	<ImageView
+	         android:id="@+id/Iv_LoginIcoyyn"
+	         android:layout_width="@dimen/main_left_menu_login_iconsize"
+	         android:layout_height="@dimen/main_left_menu_login_iconsize"
+	         android:layout_alignParentLeft="true"
+	         android:layout_centerVertical="true"
+	         android:layout_marginLeft="35dp"
+	         android:background="@drawable/main_left_menu_login_icon" />
+    <ListView
+        android:id="@+id/wwwww"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+    
+</LinearLayout>

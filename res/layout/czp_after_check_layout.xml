@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/czp_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="电气倒闸操作后应完成的工作表"
+            android:textSize="30sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_frame" >
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="序号"
+                    android:textStyle="bold" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="内容"
+                    android:textStyle="bold" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:text="落实情况"
+                    android:textStyle="bold" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="备注"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="检查本操作票是否划勾，盖 已执行 章" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_after_check_one" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="2" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="登记地线登记簿" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_after_check_twoseven" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="3" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="登记绝缘值" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_after_check_three" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="4" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="在五防主机进行操作票回传" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_after_check_four" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="5" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="修改模拟图" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_after_check_five" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="6" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="等级保护投退操作记录" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_after_check_six" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="7" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="拆回的地线放回原存放地点" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_after_check_twoseven" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="8" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="摘除的安全标志牌、使用的安全工器具放回原存放地点"
+                    android:textStyle="bold"
+                    tools:ignore="TooManyViews" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_after_check_eight" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="9" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="如实做操作记录" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_yes_no_layout" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    
+                    android:text="10" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    
+                    android:text="向机组长、值长汇报" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_yes_no_layout" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_czp_remark"
+                    style="@style/czp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text=" 备注："
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/ed_czp_after_remark"
+                    style="@style/czp_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_czp_remark"
+                    android:layout_toRightOf="@id/tv_czp_remark"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="测试"
+                    android:lines="3"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作人："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="监护人："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

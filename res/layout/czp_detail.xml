@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/czp_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="电气倒闸操作票"
+            android:textSize="30sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" >
+
+            <TextView
+                android:id="@+id/department"
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="部门："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                android:id="@+id/edit_department"
+                style="@style/czp_text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/department"
+                android:layout_toRightOf="@id/department"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                android:id="@+id/edit_number"
+                style="@style/czp_text"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_alignBaseline="@id/department" 
+                android:layout_alignParentRight="true"
+                android:inputType="number"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/edit_number"
+                android:text="编号："
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_frame"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_start_time"
+                    style="@style/czp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="操作开始时间："
+                    android:textSize="20sp" />
+
+                <util.ui.LineEditText
+                    android:id="@+id/ed_start_time"
+                    style="@style/czp_text"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_start_time"
+                    android:layout_toRightOf="@id/tv_start_time"
+                    android:background="@null"
+                    android:gravity="center_horizontal"
+                    android:hint="测试"
+                    android:maxLines="1"
+                    android:textSize="20sp" />
+
+                <util.ui.LineEditText
+                    android:id="@+id/ed_end_time"
+                    style="@style/czp_text"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:gravity="center_horizontal"
+                    android:hint="测试"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_end_time"
+                    style="@style/czp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/ed_end_time"
+                    android:text="结束时间："
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_start_time"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_czp_task"
+                    style="@style/czp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_start_time"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="操作任务："
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/ed_czp_task"
+                    style="@style/czp_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_czp_task"
+                    android:layout_toRightOf="@id/tv_czp_task"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入操作任务"
+                    android:lines="5"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="@drawable/bg_frame" >
+
+                    <TextView
+                        android:id="@+id/tv_czp_exue"
+                        style="@style/czp_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_frame"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="执行情况"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_czp_exue"
+                        android:layout_marginTop="-2dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_czp_simulation"
+                            style="@style/czp_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_frame"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="模拟"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_czp_actual"
+                            style="@style/czp_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_frame"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="实际"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_frame"
+                    android:gravity="center"
+                    android:text="序号"
+                    android:textSize="20sp" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-1dp"
+                    android:layout_weight="18"
+                    android:background="@drawable/bg_frame"
+                    android:gravity="center"
+                    android:text="操作项目"
+                    android:textSize="20sp" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="-2dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/bg_frame"
+                    android:gravity="center"
+                    android:text="时间"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <util.ui.ListViewForScrollView
+                android:id="@+id/list_czp_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/black"
+                android:dividerHeight="1dp" />
+			<TextView 
+			    android:id="@+id/empty_list_view"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center"
+			    android:padding="5dp"
+			    android:textColor="@color/red"
+			    />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_czp_remark"
+                    style="@style/czp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="备注 ："
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/ed_czp_remark"
+                    style="@style/czp_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_czp_remark"
+                    android:layout_toRightOf="@id/tv_czp_remark"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="测试"
+                    android:lines="3"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作人："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:id="@+id/ed_operator_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="监护人："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:id="@+id/ed_guard_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="值班负责人："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:id="@+id/ed_duty_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="值长："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:id="@+id/ed_duty_leader_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

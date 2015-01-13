@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="50dip">
+	<RelativeLayout
+    	android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginTop="5dip"
+		android:layout_marginBottom="5dip"
+		android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip">
+		<TextView
+		    android:id="@+id/tv_gzp_wdgzp"
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:background="@drawable/radio_buttong_bg"
+		    android:checked="false"
+		    android:gravity="center"
+		    android:textColor="@color/top_category_scroll_text_color_day"
+		    android:text="我的工作票" />
+    </RelativeLayout>
+
+	<RelativeLayout
+    	android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginTop="5dip"
+		android:layout_marginBottom="5dip"
+		android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip">
+		<TextView
+		    android:id="@+id/tv_gzp_dsgzp"
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:background="@drawable/radio_buttong_bg"
+		    android:checked="false"
+		    android:gravity="center"
+		    android:textColor="@color/top_category_scroll_text_color_day"
+		    android:text="待审工作票" />
+		</RelativeLayout>
+
+		<RelativeLayout
+	    	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"	
+			android:layout_marginTop="5dip"
+			android:layout_marginBottom="5dip"
+			android:layout_marginLeft="20dip"
+			android:layout_marginRight="20dip">	
+		    <TextView
+				android:id="@+id/tv_gzp_zzxgzp"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:background="@drawable/radio_buttong_bg"
+			    android:checked="false"
+			    android:gravity="center"
+			    android:textColor="@color/top_category_scroll_text_color_day"
+			    android:text="在执行工作票" />		
+		</RelativeLayout>
+
+		<RelativeLayout
+	    	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"	
+			android:layout_marginTop="5dip"
+			android:layout_marginBottom="5dip"
+			android:layout_marginLeft="20dip"
+			android:layout_marginRight="20dip">
+		    <TextView
+				android:id="@+id/tv_gzp_xjgzp"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:background="@drawable/radio_buttong_bg"
+			    android:checked="false"
+			    android:gravity="center"
+			    android:textColor="@color/top_category_scroll_text_color_day"
+			    android:text="新建工作票" />		
+		</RelativeLayout>		
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="50dip">
+	<RelativeLayout
+    	android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginTop="5dip"
+		android:layout_marginBottom="5dip"
+		android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip">
+		<TextView
+		    android:id="@+id/tv_rwd_wdrwd"
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:background="@drawable/radio_buttong_bg"
+		    android:checked="false"
+		    android:gravity="center"
+		    android:textColor="@color/top_category_scroll_text_color_day"
+		    android:text="我的任务单" />
+    </RelativeLayout>
+
+	<RelativeLayout
+    	android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_marginTop="5dip"
+		android:layout_marginBottom="5dip"
+		android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip">
+		<TextView
+		    android:id="@+id/tv_rwd_dsrwd"
+			android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_vertical"
+		    android:background="@drawable/radio_buttong_bg"
+		    android:checked="false"
+		    android:gravity="center"
+		    android:textColor="@color/top_category_scroll_text_color_day"
+		    android:text="待审任务单" />
+		</RelativeLayout>
+
+		<RelativeLayout
+	    	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"	
+			android:layout_marginTop="5dip"
+			android:layout_marginBottom="5dip"
+			android:layout_marginLeft="20dip"
+			android:layout_marginRight="20dip">	
+		    <TextView
+				android:id="@+id/tv_rwd_zzxrwd"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:background="@drawable/radio_buttong_bg"
+			    android:checked="false"
+			    android:gravity="center"
+			    android:textColor="@color/top_category_scroll_text_color_day"
+			    android:text="在执行任务单" />		
+		</RelativeLayout>
+
+		<RelativeLayout
+	    	android:layout_width="wrap_content"
+			android:layout_height="wrap_content"	
+			android:layout_marginTop="5dip"
+			android:layout_marginBottom="5dip"
+			android:layout_marginLeft="20dip"
+			android:layout_marginRight="20dip">
+		    <TextView
+				android:id="@+id/tv_rwd_wkprwd"
+				android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="center_vertical"
+			    android:background="@drawable/radio_buttong_bg"
+			    android:checked="false"
+			    android:gravity="center"
+			    android:textColor="@color/top_category_scroll_text_color_day"
+			    android:text="未开票任务单" />		
+		</RelativeLayout>		
+</LinearLayout>

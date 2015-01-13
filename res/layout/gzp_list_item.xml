@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:padding="10dip"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:orientation="vertical" >      
+    
+    <TextView 
+    	android:id="@+id/gzp_gznr"
+        android:layout_width="fill_parent" 
+        android:layout_height="match_parent" 
+        android:textColor="#4e4e4e" 
+        android:layout_gravity="center|left"
+        android:textSize="18sp" />         
+	    <RelativeLayout  
+		    android:id="@+id/sub_frame" 
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content" 
+		    android:layout_below="@id/gzp_gznr" > 
+			<TextView 
+		    	android:id="@+id/gzp_gzfzr"
+		        android:layout_width="wrap_content" 
+		        android:layout_height="wrap_content" 
+		        android:textColor="#999999" 
+		        android:layout_gravity="center|left"
+		        android:layout_marginRight="4dip"
+		        android:textSize="16sp" />  
+		     <TextView 
+		    	android:id="@+id/gzp_kpsj"
+		        android:layout_width="wrap_content" 
+		        android:layout_height="wrap_content" 
+		        android:textColor="#999999" 
+		        android:text="开票时间"
+		        android:layout_gravity="center|right"
+		        android:layout_marginLeft="4dip"
+		        android:textSize="16sp"
+		        android:layout_toRightOf="@id/gzp_gzfzr" /> 
+		    <TextView 
+		    	android:id="@+id/gzp_gzpid"
+		        android:layout_width="wrap_content" 
+		        android:layout_height="wrap_content" 
+		        android:textColor="#999999" 
+		        android:text="序号"
+		        android:layout_gravity="center|right"
+		        android:layout_marginLeft="4dip"
+		        android:textSize="16sp"
+		        android:layout_toRightOf="@id/gzp_kpsj"
+		        android:visibility="gone" /> 
+		</RelativeLayout>   
+</RelativeLayout > 

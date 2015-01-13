@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg_color"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/czp_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="电气倒闸操作前标准检查项目表"
+            android:textSize="30sp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_frame" >
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="序号"
+                    android:textStyle="bold" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="检查内容"
+                    android:textStyle="bold" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:text="核实情况"
+                    android:textStyle="bold" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="备注"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="1" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="操作需使用的安全工器具" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_check_one_layout" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="操作需使用的“在此工作”标志牌" />
+
+                <View style="@style/v_line" />
+
+                <!--
+                     <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="6"
+                    android:gravity="center"
+                    android:text="核实情况" />
+                -->
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_spinner" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="3" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="操作需使用的“禁止合闸，有人工作”标志牌" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_spinner" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="4" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="是否将手机等通讯工具放在集控室" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_yes_no_layout" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="5" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="是否有检修作业未结束" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_yes_no_layout" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="6" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="检查检修作业交待记录" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_yes_no_layout" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="7" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="所要操作的电器设备中是否有不能停电或不能送电的设备" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_yes_no_layout" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="8" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="所要操作的开关目前的状态 （检修/试验/工作、合闸/分闸）"
+                    tools:ignore="TooManyViews" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_check_eight" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="9" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="核实要操作设备的保护装置 投入情况记录" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_check_nine" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="10" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="操作对运行设备、检修措施是否有影响" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_check_ten" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+
+            <View style="@style/h_line" />
+
+            <TableRow>
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="11" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="5"
+                    android:text="核实是否有停送电通知单" />
+
+                <View style="@style/v_line" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="6"
+                    layout="@layout/czp_yes_no_layout" />
+
+                <View style="@style/v_line" />
+
+                <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:text="" />
+            </TableRow>
+        </TableLayout>
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp"
+            android:background="@drawable/bg_frame"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="危险点"
+                    android:textStyle="bold" />
+            <View style="@style/v_line"/>
+            <TextView
+                    style="@style/czp_text"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="控制措施"
+                    android:textStyle="bold" />
+        </LinearLayout>
+        <util.ui.ListViewForScrollView
+                android:id="@+id/list_dis_no_use"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:divider="@color/black"
+                android:dividerHeight="1dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作人："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="监护人："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/czp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="完成准备工作时间："
+                android:textSize="20sp" />
+
+            <util.ui.LineEditText
+                style="@style/czp_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_horizontal"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

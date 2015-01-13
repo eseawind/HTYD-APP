@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="meun_title">
+        <item>工作台</item>
+        <item>任务单</item>
+        <item>工作票</item>
+        <item>操作票</item>
+        <item>巡点检</item>
+        <item>缺陷</item>
+        <item>生产指标</item>
+        <item>系统设置</item>
+    </string-array>
+
+    <integer-array name="meun_picture_id">
+        <item>0x7f020071</item>
+        <item>0x7f020063</item>
+        <item>0x7f020069</item>
+        <item>0x7f02006c</item>
+        <item>0x7f020095</item>
+        <item>0x7f020074</item>
+        <item>0x7f020066</item>
+        <item>0x7f020076</item>
+    </integer-array>
+
+    <string-array name="czp_top_menu">
+        <item>我的操作票</item>
+        <item>待审操作票</item>
+        <item>在执行操作票</item>
+        <item>新建操作票</item>
+    </string-array>
+    <string-array name="czp_bottom_menu">
+        <item>主票</item>
+        <item>工作前操作票</item>
+        <item>工作后操作票</item>
+        <item>保存</item>
+        <item>下一步</item>
+        <item>返回</item>
+        <item>转执行</item>
+        <item>作废</item>
+        <item>终结</item>
+    </string-array>
+
+    <integer-array name="czp_num">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </integer-array>
+
+    <string-array name="czp_danger_array">
+        <item>人员状况（身体、精神、搭配）</item>
+        <item>测量设备绝缘</item>
+        <item>人员对系统或设备是否真正熟悉</item>
+        <item>设备存在缺陷对操作的影响</item>
+        <item>温度、湿度、气温、雨、雪对操作的影响</item>
+        <item>设备双重编号</item>
+        <item>相邻其他操作或工作对操作的影响</item>
+        <item>电气五防操作的影响</item>
+        <item>走错间隔</item>
+        <item>人员触电</item>
+        <item>现场照明不足，视线不清</item>
+        <item>人员着装不符合要求</item>
+    </string-array>
+    <string-array name="czp_tips_array">
+        <item>操作人和监护人身体状况良好，搭配合理，保持良好的精神状况。</item>
+        <item>测量绝缘前确认开关断开，并验三相无电压。</item>
+        <item>在操作前核对系统图，进行模拟演练。</item>
+        <item>确认操作的设备状态良好。</item>
+        <item>在雨、雪天禁止进行电气倒闸操作。</item>
+        <item>确认电气操作票上使用设备双重编号。</item>
+        <item>在操作时禁止参与其他工作。</item>
+        <item>在五防主机上进行电气模拟操作，正确无误方可操作。</item>
+        <item>认真检查核对设备编号。</item>
+        <item>用合适的绝缘工具及合适的验电器，操作前验电；检查各设备所有检修工作全部结束，人员全部撤出；检查开关室无人后立即锁门。</item>
+        <item>根据现场情况打开照明灯，保持足够亮度，操作人员带好手电筒。</item>
+        <item>操作人员严格按照生产现场着装要求，戴好安全帽。</item>
+    </string-array>
+
+</resources>

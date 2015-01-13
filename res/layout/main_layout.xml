@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+            android:id="@+id/Ll_Left"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <fragment  
+				android:id="@+id/Frm_Left"
+				android:name="main.fragment.left_menu_fragment"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"/>
+    </LinearLayout>      
+    
+	 <main.ui.MenuHorizontalScrollView
+        android:id="@+id/Mhsv_ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </main.ui.MenuHorizontalScrollView>
+   
+
+</FrameLayout>

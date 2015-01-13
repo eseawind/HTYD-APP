@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Ll_Right"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/main_right_top_bar" />
+
+    <main.ui.SlidingLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/Rl_RightTopMenu"
+                android:layout_width="fill_parent"
+                android:layout_height="38dip"
+                android:orientation="horizontal" >
+
+                <HorizontalScrollView
+                    android:id="@+id/Hsv_RightTopMenu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:fadingEdge="@null"
+                    android:background="#fff3f3f3"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+		               android:id="@+id/Ll_RightTopMenu"
+		               android:layout_width="fill_parent"
+		               android:layout_height="fill_parent"
+		               android:orientation="vertical" /> 
+                </HorizontalScrollView>
+            </RelativeLayout>
+			<LinearLayout
+               android:id="@+id/Ll_RightMain"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:orientation="vertical" > 
+           </LinearLayout>
+        </LinearLayout>
+    </main.ui.SlidingLinearLayout>
+
+</LinearLayout>
