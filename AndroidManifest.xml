@@ -33,8 +33,9 @@
         </activity>
         <activity
             android:name="main.activity.SelectPersonActivity"
+            android:theme="@android:style/Theme.Dialog"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Black.NoTitleBar" />
+             />
         <activity
             android:name="main.activity.LoginActivity"
             android:screenOrientation="landscape"

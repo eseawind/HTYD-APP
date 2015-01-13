@@ -141,9 +141,14 @@ public class ListDepartmentFragment extends ListFragment {
 
 	private class ViewHolder {
 		private TextView departName;
+public TextView icoTextView;
+
+
+
 
 		public ViewHolder(View v) {
 			departName = (TextView) v.findViewById(R.id.tv_depart_name);
+			icoTextView = (TextView) v.findViewById(R.id.tv_item_select_status);
 		}
 
 		public void setDepartName(String name) {

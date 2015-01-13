@@ -10,18 +10,26 @@ import main.fragment.selectperson.ListPersonFragment;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
 
 import com.example.aqscgkpt.R;
 
 public class SelectPersonActivity extends SimpleFragmentActivity implements
 		ListDepartmentFragment.Callbacks, ListPersonFragment.CallBacks {
+	
 
 	private HashMap<String, boolean[]> mSelectStatus = new HashMap<String, boolean[]>();
 	private String parentID;
 	private ArrayList<PersonBean> selectedList = new ArrayList<PersonBean>();
 
-	
+	@Override
+	protected void onCreate(Bundle arg0) {
+		// TODO 自动生成的方法存根
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		super.onCreate(arg0);
+	}
 	
 	@Override
 	protected void onDestroy() {
