@@ -38,7 +38,7 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.main_login);
 
 		try {
-
+           System.out.println("00");
 			initActivtiy();
 		} catch (JSONException e) {
 			e.printStackTrace();
