@@ -14,12 +14,12 @@ public class CommDialog
 {
 	/*
 	 * DialogType
-	 * 0¡¢¼òµ¥´°¿Ú£¬´ø±êÌâ¡¢Ë«°´Å¥
-	 * 1¡¢¼òµ¥´°¿Ú£¬´ø±êÌâ£¬´øÌáÊ¾ÄÚÈİ¡¢´øÈ·¶¨°´Å¥
-	 * 2¡¢¼òµ¥´°¿Ú£¬´ø±êÌâ£¬´øÌáÊ¾ÄÚÈİ¡¢´øÈ·¶¨°´Å¥
-	 * 3¡¢×Ô¶¨Òå´°¿Ú£¬´ø±êÌâ£¬´øÊäÈë¿òÄÚÈİ¡¢Ë«°´Å¥
-	 * 4¡¢µ¥Ñ¡ÁĞ±í´°¿Ú£¬´ø±êÌâ£¬Ë«°´Å¥
-	 * 5¡¢¶àÑ¡ÁĞ±í´°¿Ú£¬´ø±êÌâ£¬Ë«°´Å¥
+	 * 0ã€ç®€å•çª—å£ï¼Œå¸¦æ ‡é¢˜ã€åŒæŒ‰é’®
+	 * 1ã€ç®€å•çª—å£ï¼Œå¸¦æ ‡é¢˜ï¼Œå¸¦æç¤ºå†…å®¹ã€å¸¦ç¡®å®šæŒ‰é’®
+	 * 2ã€ç®€å•çª—å£ï¼Œå¸¦æ ‡é¢˜ï¼Œå¸¦æç¤ºå†…å®¹ã€å¸¦ç¡®å®šæŒ‰é’®
+	 * 3ã€è‡ªå®šä¹‰çª—å£ï¼Œå¸¦æ ‡é¢˜ï¼Œå¸¦è¾“å…¥æ¡†å†…å®¹ã€åŒæŒ‰é’®
+	 * 4ã€å•é€‰åˆ—è¡¨çª—å£ï¼Œå¸¦æ ‡é¢˜ï¼ŒåŒæŒ‰é’®
+	 * 5ã€å¤šé€‰åˆ—è¡¨çª—å£ï¼Œå¸¦æ ‡é¢˜ï¼ŒåŒæŒ‰é’®
 	 */
 	public String Title;
 	public String Message;
@@ -29,8 +29,8 @@ public class CommDialog
 	
 	public CommDialog()
 	{
-		Title = "ÌáÊ¾";
-		Message = "È·¶¨Òª¹Ø±ÕÂğ£¿";
+		Title = "æç¤º";
+		Message = "ç¡®å®šè¦å…³é—­å—ï¼Ÿ";
 		DialogType = 0;
 		ArrayItems = null;
 		bArrayItems = null;
@@ -49,7 +49,7 @@ public class CommDialog
 				dialog= new AlertDialog.Builder(context);
 				dialog.setMessage(Message);
 				dialog.setCancelable(false);
-				dialog.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener()
+				dialog.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener()
 				{  
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 
@@ -65,7 +65,7 @@ public class CommDialog
 				dialog.setTitle(Title);
 				dialog.setIcon(android.R.drawable.ic_dialog_info);
 				dialog.setMessage(Message);
-				dialog.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener()
+				dialog.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener()
 				{  
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 
@@ -81,7 +81,7 @@ public class CommDialog
 				dialog.setTitle(Title);
 				dialog.setIcon(android.R.drawable.ic_dialog_info);
 				dialog.setMessage(Message);
-				dialog.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener()
+				dialog.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener()
 				{  
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 
@@ -89,7 +89,7 @@ public class CommDialog
 						
 					}  
 				});	
-				dialog.setNegativeButton("È¡Ïû", new DialogInterface.OnClickListener()
+				dialog.setNegativeButton("å–æ¶ˆ", new DialogInterface.OnClickListener()
 				{  
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 
@@ -109,7 +109,7 @@ public class CommDialog
 				dialog.setView(Dialog_EditText);
 				Et_DialogEditText = (EditText)Dialog_EditText.findViewById(R.id.Et_DialogEditText);
 				
-				dialog.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener()
+				dialog.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener()
 				{
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 
@@ -127,7 +127,7 @@ public class CommDialog
 					    */
 					}  
 				});	
-				dialog.setNegativeButton("È¡Ïû", new DialogInterface.OnClickListener()
+				dialog.setNegativeButton("å–æ¶ˆ", new DialogInterface.OnClickListener()
 				{  
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 
@@ -149,7 +149,7 @@ public class CommDialog
 						dialog.dismiss(); 
 					}
 				});	
-				dialog.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener()
+				dialog.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener()
 				{  
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 
@@ -157,7 +157,7 @@ public class CommDialog
 						
 					}  
 				});	
-				dialog.setNegativeButton("È¡Ïû", new DialogInterface.OnClickListener()
+				dialog.setNegativeButton("å–æ¶ˆ", new DialogInterface.OnClickListener()
 				{  
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 
@@ -181,7 +181,7 @@ public class CommDialog
 						
 					}
 				});
-				dialog.setPositiveButton("È·ÈÏ", new DialogInterface.OnClickListener()
+				dialog.setPositiveButton("ç¡®è®¤", new DialogInterface.OnClickListener()
 				{   
 					@Override   
 					public void onClick(DialogInterface dialog, int which) 
@@ -191,12 +191,12 @@ public class CommDialog
 						{   
 							if (bArrayItems[i] == true)   
 							{   
-								stringBuilder.append(ArrayItems[i] + "¡¢");   
+								stringBuilder.append(ArrayItems[i] + "ã€");   
 							}   
 						}   
 					}   
 				});
-				dialog.setNegativeButton("È¡Ïû", new DialogInterface.OnClickListener()
+				dialog.setNegativeButton("å–æ¶ˆ", new DialogInterface.OnClickListener()
 				{  
 					@Override 
 					public void onClick(DialogInterface dialog, int which) 

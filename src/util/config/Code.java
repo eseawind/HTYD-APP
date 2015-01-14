@@ -9,33 +9,33 @@ import android.content.Context;
 public class Code {
 	
 	/**
-	 * ÃÜÂë½âÃÜ
+	 * å¯†ç è§£å¯†
 	 * 
 	 * @throws JSONException
 	 */
 	public static String deCode(Context pContext, String pStrPsw) throws Exception {
-		//¼ÓÂë£¬½â¾öÌØÊâ×Ö·ûÎÊÌâ
+		//åŠ ç ï¼Œè§£å†³ç‰¹æ®Šå­—ç¬¦é—®é¢˜
 		String _pwdCode = java.net.URLEncoder.encode(pStrPsw, "UTF-8");
 		Yh _yh = new Yh();
 		JSONObject _param = new JSONObject();
 		_param.put("CODE", _pwdCode);
-		//µ÷ÓÃ½âÃÜ·½·¨
+		//è°ƒç”¨è§£å¯†æ–¹æ³•
 		JSONObject dlmmJO = _yh.deCode(pContext, _param.toString());
 		return dlmmJO.getString("CODE");
 	}
 	
 	/**
-	 * ÃÜÂë¼ÓÃÜ
+	 * å¯†ç åŠ å¯†
 	 * 
 	 * @throws JSONException
 	 */
 	public static String enCode(Context pContext, String pStrPsw) throws Exception {
-		//¼ÓÂë£¬½â¾öÌØÊâ×Ö·ûÎÊÌâ
+		//åŠ ç ï¼Œè§£å†³ç‰¹æ®Šå­—ç¬¦é—®é¢˜
 		String _pwdCode = java.net.URLEncoder.encode(pStrPsw, "UTF-8");
 		Yh _yh = new Yh();
 		JSONObject _param = new JSONObject();
 		_param.put("CODE", _pwdCode);
-		//µ÷ÓÃ½âÃÜ·½·¨
+		//è°ƒç”¨è§£å¯†æ–¹æ³•
 		JSONObject dlmmJO = _yh.enCode(pContext, _param.toString());
 		return dlmmJO.getString("CODE");
 	}

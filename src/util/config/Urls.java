@@ -31,7 +31,7 @@ public class Urls {
 	public static final String TOP_WIKI_URL = BASIC_URL
 			+ "/getBbsList2.php?";
 	/**
-	 * 博客请求地址
+	 * 鍗氬璇锋眰鍦板潃
 	 */
 	public static final String TOP_LIST = BASIC_URL + "/top";
 	public static final String BLOGS_LIST = BASIC_URL + "/blog?k=lists";
@@ -62,7 +62,7 @@ public class Urls {
 	public static final String wiki = "wiki";
 	public static final String blog = "blog";
 
-	// 获取用户信息接口
+	// 鑾峰彇鐢ㄦ埛淇℃伅鎺ュ彛
 	public static final String KEYBindURL = BASIC_URL + "/userinfo?key=%s";
 
 }

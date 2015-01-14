@@ -25,9 +25,9 @@ public class Screen
 
 	public static void FullWindow(Activity activity)
 	{
-		//ÉèÖÃÎŞ±êÌâ  
+		//è®¾ç½®æ— æ ‡é¢˜  
 		activity.requestWindowFeature(Window.FEATURE_NO_TITLE);  
-        //ÉèÖÃÈ«ÆÁ  
+        //è®¾ç½®å…¨å±  
 		activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN); 
 	}
 }

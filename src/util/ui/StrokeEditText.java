@@ -25,10 +25,10 @@ public class StrokeEditText extends EditText {
 		this.setFocusable(true);
 		this.setBackgroundColor(Color.WHITE);
 		Paint myPaint = new Paint();
-		myPaint.setStyle(Paint.Style.STROKE); // ÉèÖÃstyle
-		myPaint.setAntiAlias(true); // ¿¹¾â³İ
-		myPaint.setStrokeWidth(3); // ÉèÖÃ±ß¿ò¿í¶È
-		myPaint.setColor(Color.parseColor("#02b9f5")); // ÉèÖÃ±ß¿òÑÕÉ«
+		myPaint.setStyle(Paint.Style.STROKE); // è®¾ç½®style
+		myPaint.setAntiAlias(true); // æŠ—é”¯é½¿
+		myPaint.setStrokeWidth(3); // è®¾ç½®è¾¹æ¡†å®½åº¦
+		myPaint.setColor(Color.parseColor("#02b9f5")); // è®¾ç½®è¾¹æ¡†é¢œè‰²
 		canvas.drawRect(new Rect(0, 0, getWidth(), getHeight()), myPaint);
 	}
 }

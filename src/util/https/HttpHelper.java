@@ -75,7 +75,7 @@ public class HttpHelper {
 							int res = response.getStatusLine().getStatusCode();
 							if (res != HttpStatus.SC_OK) {
 								Log.i("fanjishuo____GetResponse", "res"+res);
-								throw new RuntimeException("ÇëÇóÊ§°Ü");
+								throw new RuntimeException("è¯·æ±‚å¤±è´¥");
 							}
 							HttpEntity resEntity = response.getEntity();
 
@@ -99,7 +99,7 @@ public class HttpHelper {
 	private static HttpClient getHttpClient(Context context) {
 		if (null == customerHttpClient) {
 			HttpParams params = new BasicHttpParams();
-			// ÉèÖÃÒ»Ğ©»ù±¾²ÎÊı
+			// è®¾ç½®ä¸€äº›åŸºæœ¬å‚æ•°
 			HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
 			HttpProtocolParams.setContentCharset(params, CHARSET_UTF8);
 			HttpProtocolParams.setUseExpectContinue(params, true);
@@ -108,24 +108,24 @@ public class HttpHelper {
 							params,
 							"Mozilla/5.0(Linux;U;Android 2.2.1;en-us;Nexus One Build.FRG83) "
 									+ "AppleWebKit/553.1(KHTML,like Gecko) Version/4.0 Mobile Safari/533.1");
-			// ³¬Ê±ÉèÖÃ
-			/* ´ÓÁ¬½Ó³ØÖĞÈ¡Á¬½ÓµÄ³¬Ê±Ê±¼ä */
+			// è¶…æ—¶è®¾ç½®
+			/* ä»è¿æ¥æ± ä¸­å–è¿æ¥çš„è¶…æ—¶æ—¶é—´ */
 			ConnManagerParams.setTimeout(params, 1000);
-			/* Á¬½Ó³¬Ê± */
+			/* è¿æ¥è¶…æ—¶ */
 			int ConnectionTimeOut = 3000;
 
 			HttpConnectionParams
 					.setConnectionTimeout(params, ConnectionTimeOut);
-			/* ÇëÇó³¬Ê± */
+			/* è¯·æ±‚è¶…æ—¶ */
 			HttpConnectionParams.setSoTimeout(params, 4000);
-			// ÉèÖÃÎÒÃÇµÄHttpClientÖ§³ÖHTTPºÍHTTPSÁ½ÖÖÄ£Ê½
+			// è®¾ç½®æˆ‘ä»¬çš„HttpClientæ”¯æŒHTTPå’ŒHTTPSä¸¤ç§æ¨¡å¼
 			SchemeRegistry schReg = new SchemeRegistry();
 			schReg.register(new Scheme("http", PlainSocketFactory
 					.getSocketFactory(), 80));
 			schReg.register(new Scheme("https", SSLSocketFactory
 					.getSocketFactory(), 443));
 
-			// Ê¹ÓÃÏß³Ì°²È«µÄÁ¬½Ó¹ÜÀíÀ´´´½¨HttpClient
+			// ä½¿ç”¨çº¿ç¨‹å®‰å…¨çš„è¿æ¥ç®¡ç†æ¥åˆ›å»ºHttpClient
 			ClientConnectionManager conMgr = new ThreadSafeClientConnManager(
 					params, schReg);
 			customerHttpClient = new DefaultHttpClient(conMgr, params);
@@ -134,10 +134,10 @@ public class HttpHelper {
 	}
 
 	public static boolean isNetWorkAvailable(Context context) {
-		// ConnectivityManager:Ö÷Òª¹ÜÀíºÍÍøÂçÁ¬½ÓÏà¹ØµÄ²Ù×÷
+		// ConnectivityManager:ä¸»è¦ç®¡ç†å’Œç½‘ç»œè¿æ¥ç›¸å…³çš„æ“ä½œ
 		ConnectivityManager cm = (ConnectivityManager) context
-				.getSystemService(Context.CONNECTIVITY_SERVICE);// »ñÈ¡ÏµÍ³µÄÁ¬½Ó·şÎñ
-		// »ñÈ¡´ú±íÁªÍø×´Ì¬µÄNetWorkInfo¶ÔÏó
+				.getSystemService(Context.CONNECTIVITY_SERVICE);// è·å–ç³»ç»Ÿçš„è¿æ¥æœåŠ¡
+		// è·å–ä»£è¡¨è”ç½‘çŠ¶æ€çš„NetWorkInfoå¯¹è±¡
 		NetworkInfo info = cm.getActiveNetworkInfo();
 		boolean status = info != null && info.isConnected();
 		return status;

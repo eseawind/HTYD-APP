@@ -16,7 +16,7 @@ import android.R.string;
 
 public class WSHelper 
 {
-	//Webservice参数
+	//Webservice鍙傛暟
 	private static final String m_NAMESPACE = "http://tempuri.org/";
 	private static String m_URL = "http://110.80.33.60:118/YxzcService/Gzp/Gzp.asmx";
 	
@@ -39,7 +39,7 @@ public class WSHelper
 		//3
 		SoapObject soapObject = new SoapObject(m_NAMESPACE, strMethodName);
 		//4
-		//参数
+		//鍙傛暟
 		//5		
 		envelope.bodyOut = soapObject;
 		envelope.dotNet = true;

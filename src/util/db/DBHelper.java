@@ -6,23 +6,23 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;   
  
 /**  
- * SQLiteOpenHelperÊÇÒ»¸ö¸¨ÖúÀà£¬ÓÃÀ´¹ÜÀíÊı¾İ¿âµÄ´´½¨ºÍ°æ±¾Ëû£¬ËüÌá¹©Á½¸ö·½ÃæµÄ¹¦ÄÜ  
- * µÚÒ»£¬getReadableDatabase()¡¢getWritableDatabase()¿ÉÒÔ»ñµÃSQLiteDatabase¶ÔÏó£¬Í¨¹ı¸Ã¶ÔÏó¿ÉÒÔ¶ÔÊı¾İ¿â½øĞĞ²Ù×÷  
- * µÚ¶ş£¬Ìá¹©ÁËonCreate()¡¢onUpgrade()Á½¸ö»Øµ÷º¯Êı£¬ÔÊĞíÎÒÃÇÔÙ´´½¨ºÍÉı¼¶Êı¾İ¿âÊ±£¬½øĞĞ×Ô¼ºµÄ²Ù×÷  
+ * SQLiteOpenHelperæ˜¯ä¸€ä¸ªè¾…åŠ©ç±»ï¼Œç”¨æ¥ç®¡ç†æ•°æ®åº“çš„åˆ›å»ºå’Œç‰ˆæœ¬ä»–ï¼Œå®ƒæä¾›ä¸¤ä¸ªæ–¹é¢çš„åŠŸèƒ½  
+ * ç¬¬ä¸€ï¼ŒgetReadableDatabase()ã€getWritableDatabase()å¯ä»¥è·å¾—SQLiteDatabaseå¯¹è±¡ï¼Œé€šè¿‡è¯¥å¯¹è±¡å¯ä»¥å¯¹æ•°æ®åº“è¿›è¡Œæ“ä½œ  
+ * ç¬¬äºŒï¼Œæä¾›äº†onCreate()ã€onUpgrade()ä¸¤ä¸ªå›è°ƒå‡½æ•°ï¼Œå…è®¸æˆ‘ä»¬å†åˆ›å»ºå’Œå‡çº§æ•°æ®åº“æ—¶ï¼Œè¿›è¡Œè‡ªå·±çš„æ“ä½œ  
 */  
 public class DBHelper extends SQLiteOpenHelper {   
     private static final int VERSION = 1;  
   
     /**  
-     * ÔÚSQLiteOpenHelperµÄ×ÓÀàµ±ÖĞ£¬±ØĞëÓĞ¸Ã¹¹Ôìº¯Êı  
-     * @param context   ÉÏÏÂÎÄ¶ÔÏó  
-     * @param name      Êı¾İ¿âÃû³Æ  
+     * åœ¨SQLiteOpenHelperçš„å­ç±»å½“ä¸­ï¼Œå¿…é¡»æœ‰è¯¥æ„é€ å‡½æ•°  
+     * @param context   ä¸Šä¸‹æ–‡å¯¹è±¡  
+     * @param name      æ•°æ®åº“åç§°  
      * @param factory  
-     * @param version   µ±Ç°Êı¾İ¿âµÄ°æ±¾£¬Öµ±ØĞëÊÇÕûÊı²¢ÇÒÊÇµİÔöµÄ×´Ì¬  
+     * @param version   å½“å‰æ•°æ®åº“çš„ç‰ˆæœ¬ï¼Œå€¼å¿…é¡»æ˜¯æ•´æ•°å¹¶ä¸”æ˜¯é€’å¢çš„çŠ¶æ€  
      */  
     public DBHelper(Context context, String name, CursorFactory factory,   
             int version) {   
-        //±ØĞëÍ¨¹ısuperµ÷ÓÃ¸¸Ààµ±ÖĞµÄ¹¹Ôìº¯Êı   
+        //å¿…é¡»é€šè¿‡superè°ƒç”¨çˆ¶ç±»å½“ä¸­çš„æ„é€ å‡½æ•°   
         super(context, name, factory, version);   
     }   
 
@@ -34,12 +34,12 @@ public class DBHelper extends SQLiteOpenHelper {
         this(context,name,VERSION);   
     } 
   
-    //¸Ãº¯ÊıÊÇÔÚµÚÒ»´Î´´½¨µÄÊ±ºòÖ´ĞĞ£¬Êµ¼ÊÉÏÊÇµÚÒ»´ÎµÃµ½SQLiteDatabase¶ÔÏóµÄÊ±ºò²Å»áµ÷ÓÃÕâ¸ö·½·¨   
+    //è¯¥å‡½æ•°æ˜¯åœ¨ç¬¬ä¸€æ¬¡åˆ›å»ºçš„æ—¶å€™æ‰§è¡Œï¼Œå®é™…ä¸Šæ˜¯ç¬¬ä¸€æ¬¡å¾—åˆ°SQLiteDatabaseå¯¹è±¡çš„æ—¶å€™æ‰ä¼šè°ƒç”¨è¿™ä¸ªæ–¹æ³•   
     @Override  
     public void onCreate(SQLiteDatabase db) {   
         // TODO Auto-generated method stub   
         System.out.println("create a database");   
-        //execSQLÓÃÓÚÖ´ĞĞSQLÓï¾ä   
+        //execSQLç”¨äºæ‰§è¡ŒSQLè¯­å¥   
         db.execSQL("create table user(id int,name varchar(20))");   
     }   
   

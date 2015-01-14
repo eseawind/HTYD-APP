@@ -12,34 +12,34 @@ import android.widget.TextView;
 public class Dlyh extends Fragment {
 	private static SharedPreferences sharedPreferences;
 	private static Editor editor;
-	// µÇÂ¼ÕËºÅ
+	// ç™»å½•è´¦å·
 	public static final String STR_DLZH = "Dlzh";
-	// ÓÃ»§ÃÜÂë
+	// ç”¨æˆ·å¯†ç 
 	public static final String STR_DLMM = "Dlmm";
-	// ÓÃ»§ĞÕÃû
+	// ç”¨æˆ·å§“å
 	public static final String STR_YHMC = "Yhmc";
-	// ÓÃ»§²¿ÃÅID
+	// ç”¨æˆ·éƒ¨é—¨ID
 	public static final String STR_BMID = "Yhmc";
-	// ÓÃ»§²¿ÃÅÃû³Æ
+	// ç”¨æˆ·éƒ¨é—¨åç§°
 	public static final String STR_BMMC = "Yhmc";
-	// ÓÃ»§½ÇÉ«ID
+	// ç”¨æˆ·è§’è‰²ID
 	public static final String STR_JSID = "Yhmc";
-	// ÓÃ»§½ÇÉ«Ãû³Æ
+	// ç”¨æˆ·è§’è‰²åç§°
 	public static final String STR_JSMC = "Yhmc";
-	// µÇÂ¼ÓÃ»§ID
+	// ç™»å½•ç”¨æˆ·ID
 	public static final String STR_YHID = "Yhid";
-	// ×Ô¶¨ÒåxmlµÄÃû×Ö
+	// è‡ªå®šä¹‰xmlçš„åå­—
 	public static final String XML_NAME = "Dlyh";
 
 	public static void setDlyh(Context context, String key, String keyValue) {
-		// ´´½¨Àà»ñÈ¡Ò»¸öÒÑ¾­´æÔÚµÄsharedPreferences¶ÔÏó£¨µ¥ÀıµÄ£©
+		// åˆ›å»ºç±»è·å–ä¸€ä¸ªå·²ç»å­˜åœ¨çš„sharedPreferenceså¯¹è±¡ï¼ˆå•ä¾‹çš„ï¼‰
 		sharedPreferences = context.getSharedPreferences(XML_NAME,
 				Context.MODE_PRIVATE);
-		// ´´½¨Êı¾İ±à¼­Æ÷
+		// åˆ›å»ºæ•°æ®ç¼–è¾‘å™¨
 		editor = sharedPreferences.edit();
-		// ´«µİĞèÒª±£´æµÄÊı¾İ
+		// ä¼ é€’éœ€è¦ä¿å­˜çš„æ•°æ®
 		editor.putString(key, keyValue);
-		// ±£´æÊı¾İ
+		// ä¿å­˜æ•°æ®
 		editor.commit();
 	}
 

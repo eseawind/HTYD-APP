@@ -2,8 +2,8 @@ package util.values;
 
 public class Variable 
 {	
-	/*È«¾Ö±äÁ¿Ê¹ÓÃ*/
-	public static int densityDpi;//ÊÖ»úµÄ¾«¶È
-	public static int screenHeight = 0;//ÊÖ»úÆÁÄ»¸ß¶È
-	public static int screenWidth = 0;//ÊÖ»úÆÁÄ»¿í¶È
+	/*å…¨å±€å˜é‡ä½¿ç”¨*/
+	public static int densityDpi;//æ‰‹æœºçš„ç²¾åº¦
+	public static int screenHeight = 0;//æ‰‹æœºå±å¹•é«˜åº¦
+	public static int screenWidth = 0;//æ‰‹æœºå±å¹•å®½åº¦
 }

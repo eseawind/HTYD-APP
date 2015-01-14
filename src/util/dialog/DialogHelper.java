@@ -27,7 +27,7 @@ import android.view.LayoutInflater;
 public class  DialogHelper 
 {
 
-	//¶¨ÒåÒ»¸öÏÔÊ¾ÏûÏ¢µÄ¶Ô»°¿ò
+	//å®šä¹‰ä¸€ä¸ªæ˜¾ç¤ºæ¶ˆæ¯çš„å¯¹è¯æ¡†
 	public static void showDialog(Context ctx,String msg,Boolean goHome) 
 	{
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
@@ -35,16 +35,16 @@ public class  DialogHelper
 		builder.setCancelable(false);
 		if (goHome) 
 		{
-			builder.setPositiveButton("È·¶¨",null);	
-			builder.setNegativeButton("È¡Ïû", null);
+			builder.setPositiveButton("ç¡®å®š",null);	
+			builder.setNegativeButton("å–æ¶ˆ", null);
 		}
 		else 
 		{
-			builder.setPositiveButton("È·¶¨",null);			
+			builder.setPositiveButton("ç¡®å®š",null);			
 		}
 		builder.create().show();
 	}
-	//¶¨ÒåÒ»¸öÏÔÊ¾ÏûÏ¢ºÍ±êÌâµÄ¶Ô»°¿ò
+	//å®šä¹‰ä¸€ä¸ªæ˜¾ç¤ºæ¶ˆæ¯å’Œæ ‡é¢˜çš„å¯¹è¯æ¡†
 	public static void showDialog(Context ctx,String msg,String title,Boolean goHome) 
 	{
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
@@ -53,17 +53,17 @@ public class  DialogHelper
 		builder.setCancelable(false);
 		if (goHome) 
 		{
-			builder.setPositiveButton("È·¶¨", null);		
-			builder.setNegativeButton("È¡Ïû", null);
+			builder.setPositiveButton("ç¡®å®š", null);		
+			builder.setNegativeButton("å–æ¶ˆ", null);
 		}
 		else 
 		{
-			builder.setPositiveButton("È·¶¨",null);			
+			builder.setPositiveButton("ç¡®å®š",null);			
 		}
 
 		builder.create().show();
 	}
-	//¶¨ÒåÒ»¸öÏÔÊ¾ÏûÏ¢ºÍÍ¼Æ¬µÄ¶Ô»°¿ò
+	//å®šä¹‰ä¸€ä¸ªæ˜¾ç¤ºæ¶ˆæ¯å’Œå›¾ç‰‡çš„å¯¹è¯æ¡†
 	public static void showDialog(Context ctx,String msg,int icon,Boolean goHome) 
 	{
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
@@ -72,17 +72,17 @@ public class  DialogHelper
 		builder.setCancelable(false);
 		if (goHome) 
 		{
-			builder.setPositiveButton("È·¶¨", null);		
-			builder.setNegativeButton("È¡Ïû", null);
+			builder.setPositiveButton("ç¡®å®š", null);		
+			builder.setNegativeButton("å–æ¶ˆ", null);
 		}
 		else 
 		{
-			builder.setPositiveButton("È·¶¨",null);			
+			builder.setPositiveButton("ç¡®å®š",null);			
 		}
 		
 		builder.create().show();
 	}
-	//¶¨ÒåÒ»¸öÏÔÊ¾ÏûÏ¢,±êÌâºÍÍ¼Æ¬µÄ¶Ô»°¿ò
+	//å®šä¹‰ä¸€ä¸ªæ˜¾ç¤ºæ¶ˆæ¯,æ ‡é¢˜å’Œå›¾ç‰‡çš„å¯¹è¯æ¡†
 		public static void showDialog(Context ctx,String msg,String title,int icon,Boolean goHome) 
 		{
 			AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
@@ -93,29 +93,29 @@ public class  DialogHelper
 			
 			if (goHome) 
 			{
-				builder.setPositiveButton("È·¶¨", null);
-				builder.setNegativeButton("È¡Ïû", null);
+				builder.setPositiveButton("ç¡®å®š", null);
+				builder.setNegativeButton("å–æ¶ˆ", null);
 			}
 			else 
 			{
-				builder.setPositiveButton("È·¶¨",null);			
+				builder.setPositiveButton("ç¡®å®š",null);			
 			}
 			
 			builder.create().show();
 		}
 		
-	//¶¨ÒåÒ»¸öÏÔÊ¾×é¼şµÄ¶Ô»°¿ò
+	//å®šä¹‰ä¸€ä¸ªæ˜¾ç¤ºç»„ä»¶çš„å¯¹è¯æ¡†
 	public static  void showDialog(Context ctx,View view,OnClickListener clickp) 
 	{
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
 		builder.setView(view);
 		builder.setCancelable(false);
-		builder.setPositiveButton("È·¶¨",clickp);	
-		builder.setNegativeButton("È¡Ïû",null);
+		builder.setPositiveButton("ç¡®å®š",clickp);	
+		builder.setNegativeButton("å–æ¶ˆ",null);
 		builder.create().show();
 	}
 	
-	//¶¨ÒåÒ»¸öÏÔÊ¾×é¼şµÄ¶Ô»°¿ò,°üº¬±êÌâºÍÍ¼Æ¬
+	//å®šä¹‰ä¸€ä¸ªæ˜¾ç¤ºç»„ä»¶çš„å¯¹è¯æ¡†,åŒ…å«æ ‡é¢˜å’Œå›¾ç‰‡
 	public static  void showDialog(Context ctx,View view,String title,int icon,OnClickListener clickp) 
 	{
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
@@ -123,41 +123,41 @@ public class  DialogHelper
 		builder.setCancelable(false);
 		builder.setTitle(title);
 		builder.setIcon(icon);
-		builder.setPositiveButton("È·¶¨",clickp);	
-		builder.setNegativeButton("È¡Ïû", null);
+		builder.setPositiveButton("ç¡®å®š",clickp);	
+		builder.setNegativeButton("å–æ¶ˆ", null);
 		builder.create().show();
 	}
 	
 	
-	//¶¨ÒåÒ»¸öÏÔÊ¾µ¥Ñ¡,¶àÑ¡ºÍÁĞ±íµÄ×é¼ş
+	//å®šä¹‰ä¸€ä¸ªæ˜¾ç¤ºå•é€‰,å¤šé€‰å’Œåˆ—è¡¨çš„ç»„ä»¶
 	public static void showDialog(Context ctx,String title,int icon,String choice){
 		AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
 		final String [] persons = new String[10];
 		builder.setTitle(title);
 		builder.setIcon(icon);
 		builder.setCancelable(false);
-		//ÅĞ¶ÏchoiceÊÇtrue»¹ÊÇfalse,Èç¹ûÊÇtrueÔòµ÷ÓÃµ¥Ñ¡°´Å¥£¬Èç¹ûÎªfalseÔòµ÷ÓÃ¶àÑ¡°´Å¥
-		if (choice.equals("µ¥Ñ¡")) {
-			//²ÎÊı1£ºÊı¾İÁĞ±í£¬²ÎÊı2£ºÄ¬ÈÏÑ¡ÖĞµÄË÷Òı
+		//åˆ¤æ–­choiceæ˜¯trueè¿˜æ˜¯false,å¦‚æœæ˜¯trueåˆ™è°ƒç”¨å•é€‰æŒ‰é’®ï¼Œå¦‚æœä¸ºfalseåˆ™è°ƒç”¨å¤šé€‰æŒ‰é’®
+		if (choice.equals("å•é€‰")) {
+			//å‚æ•°1ï¼šæ•°æ®åˆ—è¡¨ï¼Œå‚æ•°2ï¼šé»˜è®¤é€‰ä¸­çš„ç´¢å¼•
 			builder.setSingleChoiceItems(persons, 0, new AlertDialog.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 			
-					dialog.dismiss();//¹Ø±Õ¶Ô»°¿ò£¬µÈÓÚdialog.cancel();
+					dialog.dismiss();//å…³é—­å¯¹è¯æ¡†ï¼Œç­‰äºdialog.cancel();
 
 				}
 			});
-			builder.setNegativeButton("È¡Ïû", null);
-		}else if(choice.equals("¶àÑ¡"))
+			builder.setNegativeButton("å–æ¶ˆ", null);
+		}else if(choice.equals("å¤šé€‰"))
 		{
 			builder.setMultiChoiceItems(persons, null, new OnMultiChoiceClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-					System.out.println("which="+which+"ÊÇ·ñÑ¡ÖĞ"+isChecked);
+					System.out.println("which="+which+"æ˜¯å¦é€‰ä¸­"+isChecked);
 				}
 			});
-			builder.setPositiveButton("È·¶¨", null);
-			builder.setNegativeButton("È¡Ïû", null);
+			builder.setPositiveButton("ç¡®å®š", null);
+			builder.setNegativeButton("å–æ¶ˆ", null);
 		}
 		else{
 			builder.setItems(persons, new DialogInterface.OnClickListener() {
@@ -172,9 +172,9 @@ public class  DialogHelper
 		builder.show();
 		
 	}
-	//¶¨ÒåÒ»¸öÔ²È¦ĞÍ½ø¶ÈÌõ¶Ô»°¿ò
+	//å®šä¹‰ä¸€ä¸ªåœ†åœˆå‹è¿›åº¦æ¡å¯¹è¯æ¡†
 	public static void showDialog(Context ctx,String message,String title,int icon) {
-		//´´½¨Ò»¸ö½ø¶ÈÌõ¶Ô»°¿ò×é¼ş
+		//åˆ›å»ºä¸€ä¸ªè¿›åº¦æ¡å¯¹è¯æ¡†ç»„ä»¶
 		ProgressDialog pd = new ProgressDialog(ctx);
 		pd.setMessage(message);
 		pd.setTitle(title);
@@ -182,32 +182,32 @@ public class  DialogHelper
 		pd.setIcon(icon);
 		pd.show();
 	}
-	//¶¨ÒåÒ»¸öÓĞ½ø¶È³¤ÌõĞÍ½ø¶È¶Ô»°¿ò
+	//å®šä¹‰ä¸€ä¸ªæœ‰è¿›åº¦é•¿æ¡å‹è¿›åº¦å¯¹è¯æ¡†
 	public static void showDialog(Context ctx,String message,String title,int icon,int style,boolean minate) {
-		//´´½¨Ò»¸ö½ø¶ÈÌõ¶Ô»°¿ò×é¼ş
+		//åˆ›å»ºä¸€ä¸ªè¿›åº¦æ¡å¯¹è¯æ¡†ç»„ä»¶
 		ProgressDialog pd = new ProgressDialog(ctx);
 		pd.setMessage(message);
 		pd.setTitle(title);
 		pd.setCancelable(false);
 		pd.setIcon(icon);
 		pd.setMax(100);  
-		//ÉèÖÃ½ø¶ÈÌõ·ç¸ñSTYLE_HORIZONTAL  
+		//è®¾ç½®è¿›åº¦æ¡é£æ ¼STYLE_HORIZONTAL  
 		pd.setProgressStyle(style);  
 		pd.setIndeterminate(minate);
 		pd.show();
 	}
 	
-	//¶¨ÒåÈÕÆÚ¶Ô»°¿ò
+	//å®šä¹‰æ—¥æœŸå¯¹è¯æ¡†
 	public static void showDialogDate(Context ctx,OnDateSetListener date) {
 		
-		DatePickerDialog dpd = new DatePickerDialog(ctx, date, 2012, 8, 26); // ×¢Òâ£ºÕâÀïµÄÊı×ÖÊÇ´Ó0µ½11
+		DatePickerDialog dpd = new DatePickerDialog(ctx, date, 2012, 8, 26); // æ³¨æ„ï¼šè¿™é‡Œçš„æ•°å­—æ˜¯ä»0åˆ°11
 		dpd.show();
 
 	}
-	//¶¨ÒåÊ±¼ä¶Ô»°¿ò
+	//å®šä¹‰æ—¶é—´å¯¹è¯æ¡†
 	public static void showDialogTime(Context ctx,OnTimeSetListener time) {
 		
-		TimePickerDialog tpd = new TimePickerDialog(ctx,time, 12, 3, true);// true±íÊ¾24Ğ¡Ê±ÖÆ£¬false±íÊ¾12Ğ¡Ê±ÖÆ
+		TimePickerDialog tpd = new TimePickerDialog(ctx,time, 12, 3, true);// trueè¡¨ç¤º24å°æ—¶åˆ¶ï¼Œfalseè¡¨ç¤º12å°æ—¶åˆ¶
 		tpd.show();   
 	}
 }
