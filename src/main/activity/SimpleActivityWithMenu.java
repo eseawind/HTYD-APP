@@ -1,7 +1,5 @@
 package main.activity;
 
-import com.example.aqscgkpt.R;
-
 import main.ui.CenterLockHorizontalScrollview;
 import main.ui.SizeCallBackForMenu;
 import android.annotation.SuppressLint;
@@ -25,6 +23,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.aqscgkpt.R;
+
 import czp.CzpActivity;
 
 public abstract class SimpleActivityWithMenu extends Activity {
@@ -124,6 +125,8 @@ public abstract class SimpleActivityWithMenu extends Activity {
 		scrollView.initViews(children, new SizeCallBackForMenu(menuButton),
 				menuLayout);
 		scrollView.setMenuBtn(menuButton);
+		setBottomMenuVisibility(false);
+		setTopMenuVisibility(false);
 	}
 
 	private class MenuItemClickListener implements OnItemClickListener {

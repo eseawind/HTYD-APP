@@ -1,9 +1,0 @@
-diff a/src/main/activity/LoginActivity.java b/src/main/activity/LoginActivity.java	(rejected hunks)
-@@ -38,6 +38,7 @@
- 		setContentView(R.layout.main_login);
- 
- 		try {
-+           System.out.println("00");
- 			initActivtiy();
- 		} catch (JSONException e) {
- 			e.printStackTrace();
