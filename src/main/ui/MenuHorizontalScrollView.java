@@ -18,29 +18,29 @@ import android.widget.ListView;
 
 public class MenuHorizontalScrollView extends HorizontalScrollView {
 	
-	/*µ±Ç°¿Ø¼ş*/
+	/*å½“å‰æ§ä»¶*/
 	private MenuHorizontalScrollView me;
 	
-	/*²Ëµ¥*/
+	/*èœå•*/
 	//private ListView menu;
 	private LinearLayout menu;
 	private ListView menu2;
-	/*²Ëµ¥×´Ì¬*/
+	/*èœå•çŠ¶æ€*/
 	public static boolean menuOut;
 	
-	/*À©Õ¹¿í¶È*/
+	/*æ‰©å±•å®½åº¦*/
 	private final int ENLARGE_WIDTH = 60;
 	
-	/*²Ëµ¥µÄ¿í¶È*/
+	/*èœå•çš„å®½åº¦*/
 	private int menuWidth;
 	
-	/*ÊÖÊÆ¶¯×÷×î¿ªÊ¼Ê±µÄx×ø±ê*/
+	/*æ‰‹åŠ¿åŠ¨ä½œæœ€å¼€å§‹æ—¶çš„xåæ ‡*/
 	private float lastMotionX = -1;
 	
-	/*°´Å¥*/
+	/*æŒ‰é’®*/
 	private ImageView menuBtn;
 		
-	/*µ±Ç°»¬¶¯µÄÎ»ÖÃ*/
+	/*å½“å‰æ»‘åŠ¨çš„ä½ç½®*/
 	private int current;
 	
 	private int scrollToViewPos;
@@ -106,7 +106,7 @@ public class MenuHorizontalScrollView extends HorizontalScrollView {
 	 }
 	 
 	 /**
-	  * ÉèÖÃ°´Å¥
+	  * è®¾ç½®æŒ‰é’®
 	  * @param btn 
 	  */
 	 public void setMenuBtn(ImageView btn){
@@ -126,7 +126,7 @@ public class MenuHorizontalScrollView extends HorizontalScrollView {
 	 }
 	 
 	 /**
-	  * »¬¶¯³ö²Ëµ¥
+	  * æ»‘åŠ¨å‡ºèœå•
 	  */
 	 private void menuSlide(){
 		 
@@ -166,7 +166,7 @@ public class MenuHorizontalScrollView extends HorizontalScrollView {
 		int x = (int)ev.getRawX();
 		
 		if(ev.getAction() == MotionEvent.ACTION_DOWN){
-			/*ÊÖÖ¸°´ÏÂÊ±µÄx×ø±ê*/
+			/*æ‰‹æŒ‡æŒ‰ä¸‹æ—¶çš„xåæ ‡*/
 			this.lastMotionX = (int)ev.getRawX();
 		}
 		if((this.current == 0 && x < this.scrollToViewPos) || 
@@ -221,7 +221,7 @@ public class MenuHorizontalScrollView extends HorizontalScrollView {
 	        	new Handler().post(new Runnable(){
 		            public void run(){
 		            	me.scrollBy(scrollToViewPos, 0);
-		            	/*ÊÓÍ¼²»ÊÇÖĞ¼äÊÓÍ¼*/
+		            	/*è§†å›¾ä¸æ˜¯ä¸­é—´è§†å›¾*/
 		            	me.setVisibility(View.VISIBLE);
 		                menu.setVisibility(View.VISIBLE);
 		            }

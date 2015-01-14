@@ -77,7 +77,7 @@ public class MenuListAdapter extends BaseAdapter
 		ViewHolder viewHolder = null;
 		if(convertView==null)
 		{
-			Log.d("MyBaseAdapter", "ĞÂ½¨convertView,position="+position);
+			Log.d("MyBaseAdapter", "æ–°å»ºconvertView,position="+position);
 			convertView = LayoutInflater.from(m_Context).inflate(
 					R.layout.main_left_menu_item, null);
 			
@@ -87,7 +87,7 @@ public class MenuListAdapter extends BaseAdapter
 			viewHolder.Iv_LeftMenuItemIcon = (ImageView)convertView.findViewById(
 					R.id.Iv_LeftMenuItemIcon);
 			
-			/*/¶¯Ì¬Ôö¼Ó1¸öImageView
+			/*/åŠ¨æ€å¢åŠ 1ä¸ªImageView
 			viewHolder.Iv_LeftMenuItemIcon = new ImageView(m_Context);
 			LinearLayout.LayoutParams mParams = new LinearLayout.LayoutParams(
 					LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -95,13 +95,13 @@ public class MenuListAdapter extends BaseAdapter
 			mParams.gravity = Gravity.CENTER;
 			mParams.width=50;
 			viewHolder.Iv_LeftMenuItemIcon.setLayoutParams(mParams);
-			//Õâ¸öImageView·Åµ½ListViewµÄµÚ2ÁĞÖ®ºó
+			//è¿™ä¸ªImageViewæ”¾åˆ°ListViewçš„ç¬¬2åˆ—ä¹‹å
 			((LinearLayout)convertView).addView(viewHolder.Iv_LeftMenuItemIcon,0);
 			*/
 			convertView.setTag(viewHolder);
 		}else{
 			viewHolder = (ViewHolder)convertView.getTag();
-			Log.d("MyBaseAdapter", "¾ÉµÄconvertView,position="+position);
+			Log.d("MyBaseAdapter", "æ—§çš„convertView,position="+position);
 		}
 		
 		String menuItemText;
@@ -110,23 +110,23 @@ public class MenuListAdapter extends BaseAdapter
 		viewHolder.Tv_LeftMenuItemText.setText(menuItemText);		
 		viewHolder.Iv_LeftMenuItemIcon.setImageResource(mk.Icon);
 		
-		//¶ÔListViewÖĞµÚ1¸öTextViewÅäÖÃOnClickÊÂ¼ş
+		//å¯¹ListViewä¸­ç¬¬1ä¸ªTextViewé…ç½®OnClickäº‹ä»¶
 		viewHolder.Tv_LeftMenuItemText.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
 				Toast.makeText(m_Context, 
-						"[textViewItem01.setOnClickListener]µã»÷ÁË" + mk.Mkmc, 
+						"[textViewItem01.setOnClickListener]ç‚¹å‡»äº†" + mk.Mkmc, 
 						Toast.LENGTH_SHORT).show();
 			}
 		});
 		
-		//¶ÔListViewÖĞµÄÃ¿Ò»ĞĞĞÅÏ¢ÅäÖÃOnClickÊÂ¼ş
+		//å¯¹ListViewä¸­çš„æ¯ä¸€è¡Œä¿¡æ¯é…ç½®OnClickäº‹ä»¶
 		convertView.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View v) {
 				Toast.makeText(m_Context, 
-						"[convertView.setOnClickListener]µã»÷ÁË" + mk.Mkmc, 
+						"[convertView.setOnClickListener]ç‚¹å‡»äº†" + mk.Mkmc, 
 						Toast.LENGTH_SHORT).show();
 			}
 			
@@ -143,9 +143,9 @@ public class MenuListAdapter extends BaseAdapter
 		case 0:
 			intent.setClass(m_Context,LoginActivity.class);
 			m_Context.startActivity(intent);
-			//¸ø½çÃæÌí¼Ó¶¯»­
+			//ç»™ç•Œé¢æ·»åŠ åŠ¨ç”»
 			m_Context.overridePendingTransition(R.anim.push_in,R.anim.push_out);
-			//¹Ø±Õµ±Ç°µÄactivity
+			//å…³é—­å½“å‰çš„activity
 			m_Context.finish();
 			break;		
 		default:
@@ -160,11 +160,11 @@ public class MenuListAdapter extends BaseAdapter
 	{
 		m_Mk = new ArrayList<Mk>();
 		
-		m_Mk.add(new Mk(1, 0, "¹¤×÷Ì¨", "gzt",R.drawable.loading_01));
-		m_Mk.add(new Mk(2, 0, "ÈÎÎñµ¥", "rwd",R.drawable.loading_02));
-		m_Mk.add(new Mk(3, 0, "¹¤×÷Æ±", "gzp",R.drawable.loading_03));
-		m_Mk.add(new Mk(4, 0, "²Ù×÷Æ±", "czp",R.drawable.loading_04));
-		m_Mk.add(new Mk(5, 0, "ÔËĞĞÈÕÖ¾", "yxrz",R.drawable.loading_05));
+		m_Mk.add(new Mk(1, 0, "å·¥ä½œå°", "gzt",R.drawable.loading_01));
+		m_Mk.add(new Mk(2, 0, "ä»»åŠ¡å•", "rwd",R.drawable.loading_02));
+		m_Mk.add(new Mk(3, 0, "å·¥ä½œç¥¨", "gzp",R.drawable.loading_03));
+		m_Mk.add(new Mk(4, 0, "æ“ä½œç¥¨", "czp",R.drawable.loading_04));
+		m_Mk.add(new Mk(5, 0, "è¿è¡Œæ—¥å¿—", "yxrz",R.drawable.loading_05));
 	}
 
 }

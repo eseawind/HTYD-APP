@@ -26,7 +26,6 @@ public class SelectPersonActivity extends SimpleFragmentActivity implements
 
 	@Override
 	protected void onCreate(Bundle arg0) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(arg0);
 	}
@@ -112,7 +111,7 @@ public class SelectPersonActivity extends SimpleFragmentActivity implements
 	private String getSelectedName(ArrayList<PersonBean> selectPerson){
 		StringBuilder sb = new StringBuilder();
 		for (PersonBean pb : selectPerson) {
-			sb.append(pb.getName() + "¡¢");
+			sb.append(pb.getName() + "ã€");
 		}
 		return sb.toString();
 	}

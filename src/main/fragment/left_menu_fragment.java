@@ -62,7 +62,7 @@ public class left_menu_fragment extends Fragment
          
          
          Tv_Left_Yhxx = (TextView) getActivity().findViewById(R.id.Tv_Left_Yhxx);
-         Tv_Left_Yhxx.setText("»¶Ó­Äú£¬" + Dlyh.getYhmc(getActivity()));
+         Tv_Left_Yhxx.setText("æ¬¢è¿æ‚¨ï¼Œ" + Dlyh.getYhmc(getActivity()));
 
 
 	 }
@@ -79,7 +79,7 @@ public class left_menu_fragment extends Fragment
 			case R.id.Rl_gzt:
 				
 				m_ScrollView.clickMenuBtn();				
-				tv_title.setText("¸öÈË¹¤×÷Ì¨");										   
+				tv_title.setText("ä¸ªäººå·¥ä½œå°");										   
 		        
 		        gzt_menu_fragment my_gzt_menu_fragment = new gzt_menu_fragment();
 		        gzt_dbtx_list_fragment gztdbtx = new gzt_dbtx_list_fragment(); 
@@ -92,7 +92,7 @@ public class left_menu_fragment extends Fragment
 			case R.id.Rl_rwd: 
 		        	        	
 				m_ScrollView.clickMenuBtn();				
-				tv_title.setText("Éú²úÈÎÎñµ¥");										   
+				tv_title.setText("ç”Ÿäº§ä»»åŠ¡å•");										   
 		        
 		        rwd_menu_fragment my_rwd_menu_fragment = new rwd_menu_fragment();
 		        Fragment1 fragment1 = new Fragment1(); 
@@ -105,7 +105,7 @@ public class left_menu_fragment extends Fragment
 			case R.id.Rl_gzp: 
 	        	
 				m_ScrollView.clickMenuBtn();				
-				tv_title.setText("¹¤×÷Æ±");										   
+				tv_title.setText("å·¥ä½œç¥¨");										   
 		        
 		        gzp_menu_fragment my_gzp_menu_fragment = new gzp_menu_fragment();
 		        gzp_list_fragment gzplist = new gzp_list_fragment(); 
@@ -117,7 +117,7 @@ public class left_menu_fragment extends Fragment
 				break;
 			case R.id.Rl_czp: 	        	
 				m_ScrollView.clickMenuBtn();				
-				tv_title.setText("²Ù×÷Æ±");										   
+				tv_title.setText("æ“ä½œç¥¨");										   
 		        
 		        czp_menu_fragment my_czp_menu_fragment = new czp_menu_fragment();
 		        CzpListFragment czplist = new CzpListFragment(); 

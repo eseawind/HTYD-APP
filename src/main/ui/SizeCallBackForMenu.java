@@ -14,7 +14,7 @@ public class SizeCallBackForMenu implements SizeCallBackInterface {
 	}
 
 	public void onGlobalLayout() {
-		/*** 根据手机精度设置显示menu主界面的右边布局宽度 **/
+		/*** 鏍规嵁鎵嬫満绮惧害璁剧疆鏄剧ずmenu涓荤晫闈㈢殑鍙宠竟甯冨眬瀹藉害 **/
 
 		if (Variable.densityDpi >= 320) {
 			this.m_menuWidth = this.m_menuLeft.getMeasuredWidth() + 420;

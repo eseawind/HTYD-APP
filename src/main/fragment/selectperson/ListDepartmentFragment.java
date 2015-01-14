@@ -132,7 +132,7 @@ public class ListDepartmentFragment extends ListFragment {
 		@Override
 		public void onClick(View v) {
 			if(preString.equals(currentParent)){
-				UItoolKit.showToastShort(getActivity(), "µ±Ç°ÒÑ¾­ÊÇµÚÒ»¼¶");
+				UItoolKit.showToastShort(getActivity(), "å·²ç»æ˜¯æœ€ä¸Šå±‚äº†");
 				return;
 			}
 			startTask(preString);
@@ -169,7 +169,7 @@ public TextView icoTextView;
 		@Override
 		protected void onPostExecute(ArrayList<DepartmentBean> result) {
 			if(result == null){
-				UItoolKit.showToastShort(getActivity(), "ÍøÂçÒì³£»òÁ¬½Ó³ö´í");
+				UItoolKit.showToastShort(getActivity(), "åŠ è½½æ•°æ®å¤±è´¥");
 				stopTask(this);
 				return;
 			}

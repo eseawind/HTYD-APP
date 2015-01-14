@@ -47,23 +47,23 @@ public class LoginActivity extends Activity {
 	}
 
 	private void initActivtiy() throws JSONException {
-		// »ñÈ¡µÇÂ¼¿òId
+		// è·å–ç™»å½•æ¡†Id
 		Et_Dlzh = (EditText) findViewById(R.id.Et_Yh);
-		// »ñÈ¡ÃÜÂë¿òId
+		// è·å–å¯†ç æ¡†Id
 		Et_Mm = (EditText) findViewById(R.id.Et_Mm);
-		// »ñÈ¡°´Å¥Id
+		// è·å–æŒ‰é’®Id
 		Btn_Dl = (Button) findViewById(R.id.Btn_Dl);
-		// ¸øµÇÂ½°´Å¥¼Ó¼àÌıÊÂ¼ş
+		// ç»™ç™»é™†æŒ‰é’®åŠ ç›‘å¬äº‹ä»¶
 		Btn_Dl.setOnClickListener(new btn_Dl_OnClickListener());
-		// »ñÈ¡¼Ç×¡ÃÜÂë¿òid
+		// è·å–è®°ä½å¯†ç æ¡†id
 		Cb_Jzmm = (CheckBox) findViewById(R.id.checkLogin);
 
-		// ¼ÇÂ¼ÓÃ»§Ãû£¬ÃÜÂë
+		// è®°å½•ç”¨æˆ·åï¼Œå¯†ç 
 		saveLogin();
 	}
 
 	/**
-	 * ¼ÇÂ¼ÃÜÂë
+	 * è®°å½•å¯†ç 
 	 */
 	private void saveLogin() {
 		if (Dlyh.isLogin(this)) {
@@ -77,50 +77,50 @@ public class LoginActivity extends Activity {
 	}
 
 	/**
-	 * ÅĞ¶ÏÓÃ»§µÇÂ¼
+	 * åˆ¤æ–­ç”¨æˆ·ç™»å½•
 	 * @throws Exception 
 	 */
 	private void getYh() throws Exception {
 		String strYh;
 		String strMm;
-		// »ñÈ¡ÓÃ»§¿òÄÚÈİ
+		// è·å–ç”¨æˆ·æ¡†å†…å®¹
 		strYh = Et_Dlzh.getText().toString();
-		// »ñÈ¡ÃÜÂë¿òÄÚÈİ
+		// è·å–å¯†ç æ¡†å†…å®¹
 		strMm = Et_Mm.getText().toString();
 		/**
-		 * ÅĞ¶ÏÕËºÅÃÜÂëÊÇ·ñÎª¿Õ
+		 * åˆ¤æ–­è´¦å·å¯†ç æ˜¯å¦ä¸ºç©º
 		 */
 		if ("".equals(strYh)) {
-			Toast.makeText(this, "ÇëÊäÈëÕËºÅ/ÃÜÂë", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "è¯·è¾“å…¥è´¦å·/å¯†ç ", Toast.LENGTH_LONG).show();
 			return;
 		}
 		m_Yh = new Yh();
-		// ¶¨ÒåJSONobject¶ÔÏó£¬´´½¨DLZH¶ÔÏó
+		// å®šä¹‰JSONobjectå¯¹è±¡ï¼Œåˆ›å»ºDLZHå¯¹è±¡
 		String strDlzh = new JSONObject().put("DLZH", strYh).toString();
-		// µ÷ÓÃgetYhIdByDlzh·½·¨½âÎöjson×Ö·û´®»ñÈ¡ÓÃ»§id
+		// è°ƒç”¨getYhIdByDlzhæ–¹æ³•è§£æjsonå­—ç¬¦ä¸²è·å–ç”¨æˆ·id
 		JSONObject yhjJsonObject = m_Yh.getYhIdByDlzh(this, strDlzh);
-		// ÅĞ¶ÏÓÃ»§ÃûÊÇ·ñ´æÔÚ
+		// åˆ¤æ–­ç”¨æˆ·åæ˜¯å¦å­˜åœ¨
 		if ("false".equals(yhjJsonObject.get("YHID"))) {
-			Toast.makeText(this, "ÕËºÅ´íÎó", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "è´¦å·é”™è¯¯", Toast.LENGTH_LONG).show();
 		}
-		// ¸ù¾İyhid£¬½âÎöjson×Ö·û´®»ñÈ¡ÓÃ»§ËùÓĞĞÅÏ¢
+		// æ ¹æ®yhidï¼Œè§£æjsonå­—ç¬¦ä¸²è·å–ç”¨æˆ·æ‰€æœ‰ä¿¡æ¯
 		JSONObject jsonUserText = m_Yh.getYhxxByYhId(this, yhjJsonObject.toString());
-		// »ñÈ¡ÓÃ»§ÕËºÅ
+		// è·å–ç”¨æˆ·è´¦å·
 		String strYhZh = jsonUserText.getString("Dlzh");
-		// »ñÈ¡ÓÃ»§ÃÜÂë
+		// è·å–ç”¨æˆ·å¯†ç 
 		String strYhMm = jsonUserText.getString("Dlmm");
 		String _strDlmm = Code.deCode(this, strYhMm);
 		String strYhMc = jsonUserText.getString("Yhmc");
 		String id = jsonUserText.getString("Yhid");
 		if (strYhZh.equals(strYh) && _strDlmm.equals(strMm)) {
 			if (Cb_Jzmm.isChecked()) {
-				// ¼Ç×¡ÓÃ»§ÕËºÅ
+				// è®°ä½ç”¨æˆ·è´¦å·
 				Dlyh.setDlyh(this, Dlyh.STR_DLZH, strYh);
 				Dlyh.setDlyh(this, Dlyh.STR_DLMM, strMm);
 				Dlyh.setDlyh(this, Dlyh.STR_YHMC, strYhMc);
 				Dlyh.setDlyh(this, Dlyh.STR_YHID, id);
 			} else {
-				// ÉèÖÃÓÃ»§ÃÜÂëÎª¿Õ
+				// è®¾ç½®ç”¨æˆ·å¯†ç ä¸ºç©º
 				Dlyh.setDlyh(this, Dlyh.STR_DLMM, null);
 			}
 
@@ -128,7 +128,7 @@ public class LoginActivity extends Activity {
 			startActivity(intent);
 			this.finish();
 		} else {
-			Toast.makeText(this, "ÃÜÂë´íÎó£¬ÇëÖØĞÂÊäÈë", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "å¯†ç é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥", Toast.LENGTH_LONG).show();
 		}
 
 	}
@@ -136,7 +136,7 @@ public class LoginActivity extends Activity {
 	private class btn_Dl_OnClickListener implements OnClickListener {
 		@Override
 		public void onClick(View v) {
-			// µ÷ÓÃÅĞ¶ÏÓÃ»§·½·¨
+			// è°ƒç”¨åˆ¤æ–­ç”¨æˆ·æ–¹æ³•
 			try {
 				getYh();
 			} catch (Exception e) {

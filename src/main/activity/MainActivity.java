@@ -40,7 +40,7 @@ public class MainActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);				
 		
-		/**³õÊ¼»¯½çÃæ******************************************************/
+		/**åˆå§‹åŒ–ç•Œé¢******************************************************/
 		
 		util.function.Screen.FullWindow(this);
 		util.function.Screen.getScreenSize(this);
@@ -48,18 +48,18 @@ public class MainActivity extends Activity
 		m_Inflater = LayoutInflater.from(this);    
 		setContentView(m_Inflater.inflate(R.layout.main_layout, null)); 
 		
-		//×ó±ßµ¼º½
+		//å·¦è¾¹å¯¼èˆª
 		m_MenuList = (LinearLayout)findViewById(R.id.Ll_Left);
 		
-		//ÓÒ±ß²¿·Ö
+		//å³è¾¹éƒ¨åˆ†
 		m_RightView = m_Inflater.inflate(R.layout.main_right,null);
 		m_MenuBtn = (ImageView) m_RightView.findViewById(R.id.top_head);
 		
-		//×ó±ß¸²¸ÇµÄ¿Õ°×²¿·Ö
+		//å·¦è¾¹è¦†ç›–çš„ç©ºç™½éƒ¨åˆ†
 		m_LeftView = new View(this);
 		m_LeftView.setBackgroundColor(Color.TRANSPARENT);
 		
-		//¹ö¶¯²¿·Ö
+		//æ»šåŠ¨éƒ¨åˆ†
 		m_ScrollView = (MenuHorizontalScrollView) findViewById(R.id.Mhsv_ScrollView);
 		m_Children = new View[] {m_LeftView, m_RightView};
 		m_ScrollView.initViews(m_Children, new SizeCallBackForMenu(m_MenuBtn),m_MenuList);
@@ -90,7 +90,7 @@ public class MainActivity extends Activity
        
         TextView tv_title = (TextView)findViewById(R.id.title);
         
-		tv_title.setText("¸öÈË¹¤×÷Ì¨");										   
+		tv_title.setText("ä¸ªäººå·¥ä½œå°");										   
         
         gzt_menu_fragment my_gzt_menu_fragment = new gzt_menu_fragment();
         gzt_dbtx_list_fragment gztdbtx = new gzt_dbtx_list_fragment(); 

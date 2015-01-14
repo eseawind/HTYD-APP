@@ -42,10 +42,10 @@ public class workflow_send_fragment_dialog extends DialogFragment {
 //		Dlyh.getBmmc(getActivity());
 		group = new ArrayList<String>();
 //		group.clear();
-		group.add("Í¬ĞÅ¹«Ë¾");
-		group.add("¶¸µç±¾²¿");
-		group.add("Ìì½¨±¾²¿");
-		group.add("±±¾©ÖĞÊ¢²©·½¹«Ë¾");
+		group.add("åŒä¿¡å…¬å¸");
+		group.add("é™¡ç”µæœ¬éƒ¨");
+		group.add("å¤©å»ºæœ¬éƒ¨");
+		group.add("åŒ—äº¬ä¸­ç››åšæ–¹å…¬å¸");
 //
 		List<String> item1 = new ArrayList<String>();
 //		for (int i = 0; i < jsonAllYh.length(); i++) {
@@ -55,21 +55,21 @@ public class workflow_send_fragment_dialog extends DialogFragment {
 //			}
 //			
 //		}
-		item1.add("Öì°ÙÁÖ");
-		item1.add("ÀîÖ¾Æ½");
-		item1.add("Äô³¬");
+		item1.add("æœ±ç™¾æ—");
+		item1.add("æå¿—å¹³");
+		item1.add("è‚è¶…");
 		List<String> item2 = new ArrayList<String>();
-		item2.add("±«Ç¿");
-		item2.add("¸ßÃû¼Ç");
+		item2.add("é²å¼º");
+		item2.add("é«˜åè®°");
 		List<String> item3 = new ArrayList<String>();
-		item3.add("Ğíº£ÁÁ");
-		item3.add("ÃçÇ¿");
-		item3.add("Ã«ÓÀÔÆ");
-		item3.add("Àîº£´º");
+		item3.add("è®¸æµ·äº®");
+		item3.add("è‹—å¼º");
+		item3.add("æ¯›æ°¸äº‘");
+		item3.add("ææµ·æ˜¥");
 		
 		List<String> item4 = new ArrayList<String>();
-		item4.add("Ğíº£ÁÁ");
-		item4.add("ÃçÇ¿");
+		item4.add("è®¸æµ·äº®");
+		item4.add("è‹—å¼º");
 
 		child = new ArrayList<List<String>>();
 		child.add(item1);
@@ -82,7 +82,7 @@ public class workflow_send_fragment_dialog extends DialogFragment {
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		builder.setTitle("·¢ËÍ´°¿Ú");
+		builder.setTitle("å‘é€çª—å£");
 		builder.setIcon(android.R.drawable.ic_dialog_info);
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		final View view = inflater.inflate(
@@ -97,20 +97,20 @@ public class workflow_send_fragment_dialog extends DialogFragment {
 		Main_WorkFlow_Send_Fragment_Dialog_ELAdapter adapter = new Main_WorkFlow_Send_Fragment_Dialog_ELAdapter(
 				getActivity(), group, child);
 		elv.setAdapter(adapter);
-		// ±éÀúËùÓĞgroup,½«ËùÓĞÏîÉèÖÃ³ÉÄ¬ÈÏÕ¹¿ª
+		// éå†æ‰€æœ‰group,å°†æ‰€æœ‰é¡¹è®¾ç½®æˆé»˜è®¤å±•å¼€
 		int groupCount = elv.getCount();
 		for (int i = 0; i < groupCount; i++) {
 			elv.expandGroup(i);
 		};
 		builder.setCancelable(true);
 		builder.setView(view);
-		builder.setPositiveButton("È·¶¨", new OnClickListener() {
+		builder.setPositiveButton("ç¡®å®š", new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 
 			}
 		});
-		builder.setNegativeButton("È¡Ïû", null);
+		builder.setNegativeButton("å–æ¶ˆ", null);
 		return builder.show();
 	}
 }

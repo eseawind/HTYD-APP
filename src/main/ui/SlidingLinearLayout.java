@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 
 public class SlidingLinearLayout extends LinearLayout {
 
-	/*手势动作最开始时的x坐标*/
+	/*鎵嬪娍鍔ㄤ綔鏈�寮�濮嬫椂鐨剎鍧愭爣*/
 	private float lastMotionX = -1;
 	
 	public SlidingLinearLayout(Context context, AttributeSet attrs) {

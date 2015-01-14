@@ -40,7 +40,7 @@ public class sign_yhmc_fragment_dialog extends DialogFragment{
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
    
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		builder.setTitle("Ç©Ãû´°¿Ú");
+		builder.setTitle("ç­¾åçª—å£");
 		builder.setIcon(android.R.drawable.ic_dialog_info);		
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		final View view = inflater.inflate(R.layout.main_sign_yhmc_fragment_dialog, null);
@@ -69,7 +69,7 @@ public class sign_yhmc_fragment_dialog extends DialogFragment{
 			}
 		});
 		
-		builder.setPositiveButton("È·¶¨", new DialogInterface.OnClickListener() {
+		builder.setPositiveButton("ç¡®å®š", new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				boolean bool = getYhIdByDlzh(m_etDlzh.getText().toString(),m_etDlmm.getText().toString());
@@ -77,31 +77,31 @@ public class sign_yhmc_fragment_dialog extends DialogFragment{
 					 //close(true);
 					 et.setText(m_strYhmc);
 				 }else{
-					 DialogHelper.showDialog(getActivity(), "²Ù×÷Ê§°Ü","²Ù×÷ÌáÊ¾", android.R.drawable.ic_dialog_info, false);
+					 DialogHelper.showDialog(getActivity(), "æ“ä½œå¤±è´¥","æ“ä½œæç¤º", android.R.drawable.ic_dialog_info, false);
 				 }
 			}
 		});
-		builder.setNeutralButton("Çå³ı", new DialogInterface.OnClickListener() {
+		builder.setNeutralButton("æ¸…é™¤", new DialogInterface.OnClickListener() {
 				
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					String zhanghao = m_etDlzh.getText().toString();
 				 	String strName = getYhidByDlzh(zhanghao);
 				 	if (m_etYhmc.getText().toString().equals(strName)) {
-				 		//DialogHelper.showDialog(getActivity(), "²Ù×÷³É¹¦","²Ù×÷ÌáÊ¾",	android.R.drawable.ic_dialog_info, false);
+				 		//DialogHelper.showDialog(getActivity(), "æ“ä½œæˆåŠŸ","æ“ä½œæç¤º",	android.R.drawable.ic_dialog_info, false);
 				 		et.setText(null);
 				 	}else{
-				 		DialogHelper.showDialog(getActivity(), "²Ù×÷Ê§°Ü,±ØĞëÊÇ±¾ÈËµÄÕËºÅºÍÃÜÂë","²Ù×÷ÌáÊ¾",
+				 		DialogHelper.showDialog(getActivity(), "æ“ä½œå¤±è´¥,å¿…é¡»æ˜¯æœ¬äººçš„è´¦å·å’Œå¯†ç ","æ“ä½œæç¤º",
 				 				android.R.drawable.ic_dialog_info, false);
 				 	}
 				}
 			});
 
-		builder.setNegativeButton("È¡Ïû", null);
+		builder.setNegativeButton("å–æ¶ˆ", null);
 		return builder.show();
 	}	
 	
-	// ¸ù¾İµÇÂ¼ÕËºÅ»ñÈ¡ÓÃ»§id
+	// æ ¹æ®ç™»å½•è´¦å·è·å–ç”¨æˆ·id
 	public boolean getYhIdByDlzh(String strDlzh, String password) {
 		String strId = null;
 		Yh myYh = new Yh();
@@ -117,7 +117,7 @@ public class sign_yhmc_fragment_dialog extends DialogFragment{
 				}
 
 			} else {
-				//DialogHelper.showDialog(getActivity(), "ÕËºÅÃûÎŞĞ§", "²Ù×÷ÌáÊ¾",android.R.drawable.ic_dialog_info, false);
+				//DialogHelper.showDialog(getActivity(), "è´¦å·åæ— æ•ˆ", "æ“ä½œæç¤º",android.R.drawable.ic_dialog_info, false);
 				return false;
 			}
 		} catch (JSONException e) {
@@ -129,7 +129,7 @@ public class sign_yhmc_fragment_dialog extends DialogFragment{
 
 	}
 
-	// ¸ù¾İÓÃ»§id»ñÈ¡ÓÃ»§ĞÅÏ¢
+	// æ ¹æ®ç”¨æˆ·idè·å–ç”¨æˆ·ä¿¡æ¯
 	public boolean getYhxxById(String strId, String password) {
 		String strMm = null;
 		Yh myYh = new Yh();
@@ -139,10 +139,10 @@ public class sign_yhmc_fragment_dialog extends DialogFragment{
 			JSONObject str = myYh.getYhxxByYhId(getActivity(), jo.toString());
 			strMm = str.getString("Dlmm");
 			if (strMm.equals(password)) {
-				//DialogHelper.showDialog(getActivity(), "²Ù×÷³É¹¦", "²Ù×÷ÌáÊ¾",android.R.drawable.ic_dialog_info, false);
+				//DialogHelper.showDialog(getActivity(), "æ“ä½œæˆåŠŸ", "æ“ä½œæç¤º",android.R.drawable.ic_dialog_info, false);
 				return true;
 			} else {
-				DialogHelper.showDialog(getActivity(), "ÓÃ»§ÃÜÂëÎŞĞ§", "²Ù×÷ÌáÊ¾",
+				DialogHelper.showDialog(getActivity(), "ç”¨æˆ·å¯†ç æ— æ•ˆ", "æ“ä½œæç¤º",
 						android.R.drawable.ic_dialog_info, false);
 				return false;
 			}
@@ -152,7 +152,7 @@ public class sign_yhmc_fragment_dialog extends DialogFragment{
 		}
 	}
 
-	// ¸ù¾İµÇÂ¼ÕËºÅ»ñÈ¡ÓÃ»§id£¬¸Ä±äEditText´¥·¢ÊÂ¼şµ÷ÓÃµÄ·½·¨
+	// æ ¹æ®ç™»å½•è´¦å·è·å–ç”¨æˆ·idï¼Œæ”¹å˜EditTextè§¦å‘äº‹ä»¶è°ƒç”¨çš„æ–¹æ³•
 	public String getYhidByDlzh(String strDlzh) {
 		String strId = null;
 		String strName = null;
@@ -173,7 +173,7 @@ public class sign_yhmc_fragment_dialog extends DialogFragment{
 		return strName;
 	}
 
-	// ¸ù¾İµÇÂ¼Id»ñÈ¡ÓÃ»§ĞÕÃû,¸Ä±äEditText´¥·¢ÊÂ¼şµ÷ÓÃµÄ·½·¨
+	// æ ¹æ®ç™»å½•Idè·å–ç”¨æˆ·å§“å,æ”¹å˜EditTextè§¦å‘äº‹ä»¶è°ƒç”¨çš„æ–¹æ³•
 	public String GetYhMcByYhId(String strId) {
 		String strXm = null;
 		Yh myYh = new Yh();

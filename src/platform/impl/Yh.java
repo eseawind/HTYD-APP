@@ -13,24 +13,24 @@ public class Yh {
 	public Yh() {}
 
 	/**
-	 * ¸ù¾İÓÃ»§µÇÂ½ÕËºÅ»ñÈ¡ÓÃ»§ID
+	 * æ ¹æ®ç”¨æˆ·ç™»é™†è´¦å·è·å–ç”¨æˆ·ID
 	 * @throws JSONException 
 	 */
 	public JSONObject getYhIdByDlzh(Context context, String param) throws JSONException{
 		JSONObject jsonUserInfo;
 		String strUrl;
-		//¶¨Òå×Ö·û´®£»¸ù¾İÓÃ»§µÇÂ½ÕËºÅ»ñÈ¡ÓÃ»§IDµÄ·½·¨
+		//å®šä¹‰å­—ç¬¦ä¸²ï¼›æ ¹æ®ç”¨æˆ·ç™»é™†è´¦å·è·å–ç”¨æˆ·IDçš„æ–¹æ³•
 		String strOperate = "Operate=GetYhIdByDlzh";
-		//Æ´½Ó²éÑ¯ÓÃ»§µÄurl
+		//æ‹¼æ¥æŸ¥è¯¢ç”¨æˆ·çš„url
 		strUrl = Urls.YH_URL + strOperate;
-		//×ªÒåµÇÂ¼½çÃæ´«À´µÄÓÃ»§Ãû
+		//è½¬ä¹‰ç™»å½•ç•Œé¢ä¼ æ¥çš„ç”¨æˆ·å
 		NameValuePair number = new BasicNameValuePair("Params", param);
-		//µ÷ÓÃ·½·¨½âÎöurl
+		//è°ƒç”¨æ–¹æ³•è§£æurl
 		jsonUserInfo = new JSONObject(HttpHelper.GetResponse(context, strUrl, number));
 		return jsonUserInfo;
 	}
 	/**
-	 * ÃÜÂë½âÃÜ
+	 * å¯†ç è§£å¯†
 	 * @param context
 	 * @param param
 	 * @return
@@ -51,7 +51,7 @@ public class Yh {
 		return _jsonDeCode;
 	}
 	/**
-	 * ÃÜÂë¼ÓÃÜ
+	 * å¯†ç åŠ å¯†
 	 * @param context
 	 * @param param
 	 * @return
@@ -73,37 +73,37 @@ public class Yh {
 	}
 	
 	/**
-	 * ¸ù¾İÓÃ»§µÇÂ½ÕËºÅ»ñÈ¡ÓÃ»§ID
+	 * æ ¹æ®ç”¨æˆ·ç™»é™†è´¦å·è·å–ç”¨æˆ·ID
 	 * @throws JSONException 
 	 */
 	public JSONObject getYhmcByDlzh(Context context, String param) throws JSONException{
 		JSONObject jsonUserInfo;
 		String strUrl;
-		//¶¨Òå×Ö·û´®£»¸ù¾İÓÃ»§µÇÂ½ÕËºÅ»ñÈ¡ÓÃ»§IDµÄ·½·¨
+		//å®šä¹‰å­—ç¬¦ä¸²ï¼›æ ¹æ®ç”¨æˆ·ç™»é™†è´¦å·è·å–ç”¨æˆ·IDçš„æ–¹æ³•
 		String strOperate = "Operate=GetYhmcByDlzh";
-		//Æ´½Ó²éÑ¯ÓÃ»§µÄurl
+		//æ‹¼æ¥æŸ¥è¯¢ç”¨æˆ·çš„url
 		strUrl = Urls.YH_URL + strOperate;
-		//×ªÒåµÇÂ¼½çÃæ´«À´µÄÓÃ»§Ãû
+		//è½¬ä¹‰ç™»å½•ç•Œé¢ä¼ æ¥çš„ç”¨æˆ·å
 		NameValuePair number = new BasicNameValuePair("Params", param);
-		//µ÷ÓÃ·½·¨½âÎöurl
+		//è°ƒç”¨æ–¹æ³•è§£æurl
 		jsonUserInfo = new JSONObject(HttpHelper.GetResponse(context, strUrl, number));
 		return jsonUserInfo;
 	}
 	
 	/**
-	 * ¸ù¾İÓÃ»§ID»ñÈ¡ÓÃ»§ĞÅÏ¢
+	 * æ ¹æ®ç”¨æˆ·IDè·å–ç”¨æˆ·ä¿¡æ¯
 	 * @throws JSONException 
 	 */
 	public JSONObject getYhxxByYhId(Context context, String param) throws JSONException{
 		JSONObject jsonUserText;
 		String strUrl;
-		//¶¨Òå×Ö·û´®£»¸ù¾İÓÃ»§ID»ñÈ¡ÓÃ»§ĞÅÏ¢
+		//å®šä¹‰å­—ç¬¦ä¸²ï¼›æ ¹æ®ç”¨æˆ·IDè·å–ç”¨æˆ·ä¿¡æ¯
 		String strOperate = "Operate=GetYhxxByYhId";
-		//Æ´½Ó²éÑ¯ÓÃ»§ËùÓĞĞÅÏ¢µÄurl
+		//æ‹¼æ¥æŸ¥è¯¢ç”¨æˆ·æ‰€æœ‰ä¿¡æ¯çš„url
 		strUrl = Urls.YH_URL + strOperate;
-		//×ªÒåµÇÂ¼½çÃæ´«À´µÄYHID
+		//è½¬ä¹‰ç™»å½•ç•Œé¢ä¼ æ¥çš„YHID
 		NameValuePair number = new BasicNameValuePair("Params", param);
-		//µ÷ÓÃ·½·¨½âÎöurl
+		//è°ƒç”¨æ–¹æ³•è§£æurl
 		jsonUserText = new JSONObject(HttpHelper.GetResponse(context, strUrl, number));
 		return jsonUserText;
 	}

@@ -24,37 +24,37 @@ public class workflow_back_fragment_dialog extends DialogFragment {
 	
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
-		//¸øspinner¸³Öµ
+		//ç»™spinnerèµ‹å€¼
 		ArrayAdapter<String> arrayAdapter;
-		String[] db = {"½¨Æ±"};
+		String[] db = {"å»ºç¥¨"};
 		arrayAdapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,db);
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		builder.setTitle("ÍË»Ø´°¿Ú");
+		builder.setTitle("é€€å›çª—å£");
 		builder.setIcon(android.R.drawable.ic_dialog_info);		
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		final View view = inflater.inflate(R.layout.main_workflow_back_fragment_dialog, null);
 		final EditText et_send_back = (EditText) view.findViewById(R.id.Et_Send_Back);
 		builder.setView(view);
-		//»ñÈ¡spinner¿Ø¼ş
+		//è·å–spinneræ§ä»¶
 		m_strSpn = (Spinner) view.findViewById(R.id.sp);
 		m_strSpn.setAdapter(arrayAdapter);
-		//»ñÈ¡EditText¿Ø¼ş
+		//è·å–EditTextæ§ä»¶
 		m_editText = (EditText) view.findViewById(R.id.Et_Send_Back);
 		
-		builder.setPositiveButton("È·¶¨", new OnClickListener() {
+		builder.setPositiveButton("ç¡®å®š", new OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				if(!"".equals(et_send_back.getText().toString().trim())){
-					Toast.makeText(getActivity(), "ÍË»Ø³É¹¦" + et_send_back.getText(), Toast.LENGTH_LONG).show();
+					Toast.makeText(getActivity(), "é€€å›æˆåŠŸ" + et_send_back.getText(), Toast.LENGTH_LONG).show();
 				}else{
-					Toast.makeText(getActivity(), "ÍË»ØÊ§°Ü£¬ÇëÊäÈëÒâ¼û", Toast.LENGTH_LONG).show();
+					Toast.makeText(getActivity(), "é€€å›å¤±è´¥ï¼Œè¯·è¾“å…¥æ„è§", Toast.LENGTH_LONG).show();
 				}
 				
 			}
 		});
-		builder.setNegativeButton("È¡Ïû", null);
+		builder.setNegativeButton("å–æ¶ˆ", null);
 		
 		return builder.show();
 	}

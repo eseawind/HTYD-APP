@@ -17,7 +17,7 @@ import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.TimePicker.OnTimeChangedListener;
 @SuppressLint("NewApi")
 public class DateTimePicker_fragment_dialog extends DialogFragment {
-		// ¶¨Òå5¸ö¼ÇÂ¼µ±Ç°Ê±¼äµÄ±äÁ¿
+		// å®šä¹‰5ä¸ªè®°å½•å½“å‰æ—¶é—´çš„å˜é‡
 	private int year;
 	private int month;
 	private int day;
@@ -33,7 +33,7 @@ public class DateTimePicker_fragment_dialog extends DialogFragment {
 	@Override
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		builder.setTitle("Ñ¡ÔñÊ±¼ä");
+		builder.setTitle("é€‰æ‹©æ—¶é—´");
 		builder.setIcon(android.R.drawable.ic_dialog_info);
 		LayoutInflater inflater = getActivity().getLayoutInflater();
 		final View view = inflater.inflate(R.layout.main_datetimepicker_fragment_dialog, null);
@@ -46,15 +46,15 @@ public class DateTimePicker_fragment_dialog extends DialogFragment {
 		day = c.get(Calendar.DAY_OF_MONTH);
 		hour= c.get(Calendar.HOUR_OF_DAY);
 		minute=c.get(Calendar.MINUTE);
-		builder.setPositiveButton("Íê³É", new OnClickListener() {
+		builder.setPositiveButton("å®Œæˆ", new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
  				edt.setText(year+"-"+(month+1)+"-"+day+" "+String.format("%02d", hour)+":"+String.format("%02d",minute));
 				
 			}
 		});
-		builder.setNegativeButton("È¡Ïû", null);
-		 //³õÊ¼»¯dataPicker×é¼ş£¬³õÊ¼»¯Ê±Ö¸¶¨¼àÌıÆ÷
+		builder.setNegativeButton("å–æ¶ˆ", null);
+		 //åˆå§‹åŒ–dataPickerç»„ä»¶ï¼Œåˆå§‹åŒ–æ—¶æŒ‡å®šç›‘å¬å™¨
 		 dp.init(year, month, day, new OnDateChangedListener() {
 		
 		 @Override
@@ -63,11 +63,11 @@ public class DateTimePicker_fragment_dialog extends DialogFragment {
 			 DateTimePicker_fragment_dialog.this.year=year;
 			 DateTimePicker_fragment_dialog.this.month=monthOfYear;
 			 DateTimePicker_fragment_dialog.this.day=dayOfMonth;
-			 //ÏÔÊ¾µ±Ç°ÈÕÆÚ£¬Ê±¼ä
+			 //æ˜¾ç¤ºå½“å‰æ—¥æœŸï¼Œæ—¶é—´
 		 
 		 }
 		 });
-		 //ÎªTimePickerÖ¸¶¨¼àÌıÆ÷
+		 //ä¸ºTimePickeræŒ‡å®šç›‘å¬å™¨
 		 tp.setOnTimeChangedListener(new OnTimeChangedListener() {
 		 @Override
 		 public void onTimeChanged(TimePicker view, int hourOfDay, int minute)

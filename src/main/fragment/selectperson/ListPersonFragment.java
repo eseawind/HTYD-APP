@@ -97,7 +97,7 @@ public class ListPersonFragment extends Fragment {
 		mListView.setOnItemClickListener(new PersonSelectListener());
 		TextView title = (TextView) v.findViewById(R.id.tv_person_list_title);
 		if (parentName.length() == 0) {
-			title.setText("ÈËÔ±ÁĞ±í");
+			title.setText("äººå‘˜åˆ—è¡¨");
 		} else {
 			title.setText(parentName);
 		}
@@ -252,7 +252,7 @@ public class ListPersonFragment extends Fragment {
 		@Override
 		protected void onPostExecute(ArrayList<PersonBean> result) {
 			if (result == null) {
-				UItoolKit.showToastShort(getActivity(), "ÍøÂçÒì³£»òÁ¬½Ó³ö´í");
+				UItoolKit.showToastShort(getActivity(), "åŠ è½½æ•°æ®å¤±è´¥");
 				stopTask(this);
 				return;
 			}
@@ -280,7 +280,7 @@ public class ListPersonFragment extends Fragment {
 				+ selectPerson.size());
 		StringBuilder sb = new StringBuilder();
 		for (PersonBean pb : selectPerson) {
-			sb.append(pb.getName() + "¡¢");
+			sb.append(pb.getName() + "ã€");
 		}
 		String nameList = getString(R.string.select_person_name, sb.toString(),
 				selectPerson.size() + "");

@@ -46,7 +46,7 @@ public class right_top_menu_fragment extends Fragment
          LinearLayout m_RightTopMenu; 
 		 m_RightTopMenu = (LinearLayout)getActivity().findViewById(R.id.Ll_RightTopMenu); 
 		 
-		//获取左边节点的ID
+		//鑾峰彇宸﹁竟鑺傜偣鐨処D
 		int MenuListViewId;
 		
 		MenuListViewId = 1;
@@ -57,7 +57,7 @@ public class right_top_menu_fragment extends Fragment
 			
 			myBtn[0] = new Button(getActivity());
 			myBtn[0].setId(11);
-			myBtn[0].setText("待办提醒");
+			myBtn[0].setText("寰呭姙鎻愰啋");
 			myBtn[0].setTextSize(11);
 			
 			//myBtn[0].setWidth(400);
@@ -79,7 +79,7 @@ public class right_top_menu_fragment extends Fragment
 			        fragmentTransaction.addToBackStack(null); 
 			        fragmentTransaction.commit(); 
 			        
-					Toast.makeText(getActivity(), "默认Toast样式111",
+					Toast.makeText(getActivity(), "榛樿Toast鏍峰紡111",
 						     Toast.LENGTH_SHORT).show();
 				}
 			});
@@ -87,7 +87,7 @@ public class right_top_menu_fragment extends Fragment
 			
 			myBtn[1] = new Button(getActivity());
 			myBtn[1].setId(12);
-			myBtn[1].setText("快捷工作");
+			myBtn[1].setText("蹇嵎宸ヤ綔");
 			//myBtn[1].setWidth(400);
 			//myBtn[1].setHeight(40);
 			myBtn[1].setBackgroundColor(Color.rgb(100,0, 255));
@@ -107,7 +107,7 @@ public class right_top_menu_fragment extends Fragment
 			        fragmentTransaction.addToBackStack(null); 
 			        fragmentTransaction.commit(); 
 			        
-					Toast.makeText(getActivity(), "默认Toast样式222",
+					Toast.makeText(getActivity(), "榛樿Toast鏍峰紡222",
 						     Toast.LENGTH_SHORT).show();
 				}
 			});
@@ -116,7 +116,7 @@ public class right_top_menu_fragment extends Fragment
 			
 			myBtn[2] = new Button(getActivity());
 			myBtn[2].setId(13);
-			myBtn[2].setText("工作计划");
+			myBtn[2].setText("宸ヤ綔璁″垝");
 			//myBtn[2].setWidth(400);
 			//myBtn[2].setHeight(40);
 			myBtn[2].setBackgroundColor(Color.rgb(0,255, 100));
@@ -132,7 +132,7 @@ public class right_top_menu_fragment extends Fragment
 			
 			myBtn[3] = new Button(getActivity());
 			myBtn[3].setId(14);
-			myBtn[3].setText("密码修改");
+			myBtn[3].setText("瀵嗙爜淇敼");
 			//myBtn[3].setWidth(400);
 			//myBtn[3].setHeight(40);
 			myBtn[3].setBackgroundColor(Color.rgb(0,100, 50));

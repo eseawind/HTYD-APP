@@ -32,10 +32,10 @@ import android.widget.TimePicker;
 @SuppressLint("NewApi")
 public class DatePicker_fragment_dialog extends DialogFragment implements OnDateSetListener {
 
-	//ÄêÔÂÈÕ
-	//ÄêÔÂÈÕÊ±
-	//ÄêÔÂÈÕÊ±·Ö
-	//ÄêÔÂÈÕÊ±·ÖÃë
+	//å¹´æœˆæ—¥
+	//å¹´æœˆæ—¥æ—¶
+	//å¹´æœˆæ—¥æ—¶åˆ†
+	//å¹´æœˆæ—¥æ—¶åˆ†ç§’
 	private static EditText etDatePicker;
 	public EditText getEtDatePicker() {
 		return etDatePicker;
