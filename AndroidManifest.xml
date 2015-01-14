@@ -50,6 +50,10 @@
             android:name="czp.CzpActivity"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name="xdj.activity.XDJ_MainActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
     </application>
 
 </manifest>

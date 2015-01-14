@@ -1,5 +1,6 @@
 package main.activity;
 
+import xdj.activity.XDJ_MainActivity;
 import main.ui.CenterLockHorizontalScrollview;
 import main.ui.SizeCallBackForMenu;
 import android.annotation.SuppressLint;
@@ -152,6 +153,9 @@ public abstract class SimpleActivityWithMenu extends Activity {
 				finish();
 				break;
 			case 4:
+				scrollView.clickMenuBtn();
+				Intent i4 = new Intent(context, XDJ_MainActivity.class);
+				startActivity(i4);
 				scrollView.clickMenuBtn();
 				break;
 			case 5:

@@ -53,7 +53,7 @@ public class CzpActivity extends SimpleActivityWithMenu implements
 	@Override
 	public void onItemClick(int position,CzpZpBean mBean) {
 		if(czpList.get(position).getCzpType() == 25){
-			UItoolKit.showToastShort(getBaseContext(), "»¹Ã»ÓĞÈÈÁ¦»úĞµ²Ù×÷Æ±µÄÄ£¿é!");
+			UItoolKit.showToastShort(getBaseContext(), "è¿˜æ²¡æœ‰çƒ­åŠ›æœºæ¢°æ“ä½œç¥¨çš„æ¨¡å—!");
 			return;
 		}
 		replaceFragment(CzpItemDetailFragment.newInstance(czpList.get(position).getCzpTask(), mBean),false);
@@ -63,19 +63,19 @@ public class CzpActivity extends SimpleActivityWithMenu implements
 	@Override
 	public void onTopMenuClickListener(int position) {
 		switch(position){
-		case 0://ÎÒµÄ²Ù×÷Æ±
+		case 0://æˆ‘çš„æ“ä½œç¥¨
 			setBottomMenuVisibility(false);
 			replaceFragment(CzpListFragment.newInstance(czpList),false);
 			break;
-		case 1://´ıÉó²Ù×÷Æ±
+		case 1://å¾…å®¡æ“ä½œç¥¨
 			setBottomMenuVisibility(false);
 			replaceFragment(CzpListFragment.newInstance(czpList),false);
 			break;
-		case 2://ÔÚÖ´ĞĞ²Ù×÷Æ±
+		case 2://åœ¨æ‰§è¡Œæ“ä½œç¥¨
 			setBottomMenuVisibility(false);
 			replaceFragment(CzpListFragment.newInstance(czpList),false);
 			break;
-		case 3://ĞÂ½¨²Ù×÷Æ±
+		case 3://æ–°å»ºæ“ä½œç¥¨
 			setBottomMenuVisibility(false);
 			replaceFragment(CzpListFragment.newInstance(czpList),false);
 			break;
@@ -85,31 +85,31 @@ public class CzpActivity extends SimpleActivityWithMenu implements
 	@Override
 	public void onBottomMenuClickListener(int position) {
 		switch(position){
-		case 0://Ö÷Æ±
+		case 0://ä¸»ç¥¨
 			replaceFragment(new CzpListFragment(),false);
 			break;
-		case 1://¹¤×÷Ç°²Ù×÷Æ±
+		case 1://å·¥ä½œå‰æ“ä½œç¥¨
 			replaceFragment(new CzpListFragment(),false);
 			break;
-		case 2://¹¤×÷ºó²Ù×÷Æ±
+		case 2://å·¥ä½œåæ“ä½œç¥¨
 			replaceFragment(new CzpListFragment(),false);
 			break;
-		case 3://±£´æ
+		case 3://ä¿å­˜
 			replaceFragment(new CzpListFragment(),false);
 			break;
-		case 4://ÏÂÒ»²½
+		case 4://ä¸‹ä¸€æ­¥
 			replaceFragment(new CzpListFragment(),false);
 			break;
-		case 5://·µ»Ø
+		case 5://è¿”å›
 			replaceFragment(new CzpListFragment(),false);
 			break;
-		case 6://×ªÖ´ĞĞ
+		case 6://è½¬æ‰§è¡Œ
 			replaceFragment(new CzpListFragment(),false);
 			break;
-		case 7://×÷·Ï
+		case 7://ä½œåºŸ
 			replaceFragment(new CzpListFragment(),false);
 			break;
-		case 8://ÖÕ½á
+		case 8://ç»ˆç»“
 			replaceFragment(new CzpListFragment(),false);
 			break;
 		}
@@ -142,7 +142,7 @@ public class CzpActivity extends SimpleActivityWithMenu implements
 				Fragment fragment = CzpListFragment.newInstance(czpList);
 				replaceFragment(fragment,false);
 			}else{
-				UItoolKit.showToastShort(getBaseContext(), "Á¬½ÓÊ§°Ü»òÍøÂçÒì³£");
+				UItoolKit.showToastShort(getBaseContext(), "è¿æ¥å¤±è´¥æˆ–ç½‘ç»œå¼‚å¸¸");
 			}
 			stopTask(this);
 		}
